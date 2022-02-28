@@ -1,0 +1,58 @@
+{% extends 'base/generic_base.html' %} 
+{% load crispy_forms_tags %}
+{% load static %}
+{% block content %}
+<p class="text-center h3 top3"><u>{{title|upper}}</u></p>
+<center class=""><p><em>{{confirm_message|upper}}</em></p></center>
+{% if form %}
+<section class="intro well">
+        <div class="container">
+          <div class="row">                  
+            <div class="col-lg-6 text-justify panel">
+           
+            <center class="top2"> <img src="{% static 'images/services/pagesum.jpg'%}" style="width: 300px;"/><br> 
+               
+                <p class=""><strong> ADVANTAGE OF THE BEST PROFSSIONAL SKILLS</strong></p>
+                <center class="text-justify">
+                
+                <pre class="">   
+                        <span class="h6 pull-left"> <b>FOR YOUR: </b></span>
+                    <ul type='blockquote block' class="h5">
+                        > Project/Research Works<br />
+                         > Seminar Presentations<br />
+                         > Term Paper work<br />
+                         > Laboratory Analysis<br />
+                         > Statistical Data Analysis<br />
+                         > Digital Marketing<br />
+                         > Content development/Managment<br />
+                         > Web Development<br />                  
+                    </ul>           
+            </pre> 
+            <p class="h6"> <em>We Are EAGER to Hear From You!<br /> GET IN TOUCH NOW BY FILLING THE FORM</em></p>
+                </center>
+            </center>
+            </div>            
+            <div class="col-lg-6 text-justify h5 well" style="padding-left:5vw; padding-right:5vw; ">                                                          
+                <form class="form-horizontal bottom3 top3" role="form"  method="POST" action="." enctype="multipart/form-data">
+                    <div class="form-group">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-md-5">
+                                    {% csrf_token %}
+                                    {{form|crispy}} 
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <center><input id="submit" name="submit" type="submit" value="Submit" class="btn btn-primary btn-hover"></center>
+                </form>        
+            </div>
+        </div>
+    </div>
+</section>
+{% endif %} 
+
+{%if not form%}
+<p style="height: 17vw;"></p>
+{% endif %}
+{% endblock %}

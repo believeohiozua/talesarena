@@ -1,0 +1,302 @@
+{% extends 'base/generic_base.html' %} 
+{% load crispy_forms_tags %}
+{% load static %}
+{% load social_share %}
+ {% load bootstrap_pagination %}
+
+{% block content %}
+<style>
+
+/* The popup form - hidden by default */
+.form-popup {
+  display: none;  
+  right: 15px;
+  border: 3px solid #f1f1f1;
+  z-index: 9;
+}
+.form-popup input[type=number]{
+  width:auto;
+}
+</style>
+
+
+<div class="container">
+    <div class="row">      
+      <div class="col-lg-8"> 
+      <div class="top3">
+       {% if post.publish %}     
+        <center class="well">           
+          {% if post.thumbnail %}
+           <img src="{{ post.thumbnail.url }}" class="img-responsive"  alt="fashion">
+           {% else %}
+           <img src="{% static 'images/badge.png' %}" class="img-responsive" style="width: 100%; height: 10%;" alt="fashion">
+            {% endif %}
+         </center>
+    
+       <center class=" h2" style="color: #152c35;">{{ post.title|title }}</center>
+         <center>
+           <span class="label-default h3" style="color: white;">             
+            By: {% if post.author.profile_photo %}
+              <span class=""><img style="width: 50px" src="{{post.author.profile_photo.url}}" alt="..." class="img-circle"></span>&nbsp; &nbsp;
+            {% else %}
+            <span class=""><img style="width: 50px" src="{% static 'images/i.jpg'%}" alt="..." class="img-circle"></span>&nbsp; &nbsp;
+            {% endif %}
+
+             <a style="color: thistle" class="" href="{% url 'profile-detail' post.author.pk %}">{{ post.author }}</a>
+             </span>
+             <span> / </span>
+             {% for cat in post.categories.all|slice:":5" %}
+             <span class="label label-default">{{ cat }}</span>
+             {% endfor %}
+             <span> / </span>             
+             <span class="label label-default"> {{ post.timestamp|timesince }} ago </span>             
+             {% if post.author.user == request.user %}                   
+             <span class="pull-right"> 
+                &nbsp;&nbsp;<button class="btn btn-danger btn-xs" style="font-size:11px"><a style="color:white;" href="{% url 'post-delete' pk=post.pk %}">Delete</a><i class="fa fa-trash-o"></i></button>
+              </span>
+              
+              <span class="pull-right">                 
+                  <a style="color:white;" href="{% url 'post-update' pk=post.pk %}">  <button class="btn btn-primary btn-xs pull-right" style="font-size:11px">Edith  <i class="fa fa-edit"></i></button></a>
+              </span>
+            {% endif %}          
+          </center>
+          <span style="font-family: Georgia, 'Times New Roman', Times, serif; text-align: justify; text-justify: inter-word;">
+            <header> <i class="fa fa-"></i> </header> 
+           
+            <div class="well">   
+                    {% if not post_sum %}                
+                {{ post.overview|safe|linebreaksbr}}
+                {{ post.content|safe|linebreaksbr}}
+                      {% else %}
+            <center>
+                <h4>  <u>Post Summary</u>   </h4>              
+                {% for sentence in post_sum %}                                   
+                  {{sentence|striptags|safe}}
+                      {% endfor %}  
+                  {{ post.content|safe|linebreaksbr}}                                   
+                    <p>-----END-----</p>
+                  <a href="{{post.get_absolute_url}}"
+                  class="btn btn-primary btn-xs">
+                  view full Story</a> 
+                    {% endif %}
+            </center>
+          </div>
+              
+          </span>
+         </div>
+         
+              
+ <!--############################-END POST SECTION-######|linebreaks   ###############################-->
+ <center class="" id="like-section">                
+    {% include 'base/like_section.html' %}              
+</center>
+<center class="form-popup top3 bottom3" id="myForm">
+    <form action="."> 
+      <p class="h6">Summarize This Post in How Many Scentences?</p>
+      <input type="number" name="sentence_count" id="sentence_count" placeholder="Enter no. of sentences">
+      <input class="btn-primary btn-xs" type="submit" value="summarize" /> 
+     <button type="button" class="btn btn-danger btn-xs" onclick="closeForm()">Close</button>
+    </form>
+  </center>
+
+
+<!--############################-Pagniation-#####################################-->
+
+<!--############################-Pagniation-#####################################-->
+<center class="">
+<div class="bottom6">
+    <div class="">
+      <a class="btn btn-default btn-block toggle-pagination  label-danger" style="color: white; background-color: #152c35; "><i class="glyphicon glyphicon-plus"></i> Toggle Next Tale</a>
+        <ul class="pagination pagination-responsive pagination-lg"> 
+        <section class="intro">
+            <div class="container">
+                <center class="row">
+                    <div class="col-sm-4 pagination">
+                      {% if post.previous_post %}
+                      <li><a class="" href="{{ post.previous_post.get_absolute_url }}">&laquo;<strong>Previous Post</strong> <br> {{ post.previous_post.title|title }} </a></li>         
+                        {% endif %} 
+                      </div>
+
+                      <div class="col-sm-4 pagination">
+                      {% if post.next_post %}                 
+                      <li><a class="" href="{{ post.next_post.get_absolute_url }}"><strong>Next Post</strong> &raquo;<br> {{ post.next_post.title|title }}</a></li>
+                      {% endif %}  
+                    </div>
+                </center>
+            </div>
+        </section>              
+        </ul>
+    </div>      
+</div>     
+</center>
+
+<!--############################ Comment VIEW SECTION- ###########################################-->
+       <section class="comment-list">
+       <h2 class="page-header">Comments ({{ post.comment_count }})</h2>         
+          {% for comment in post.get_comments %}
+          {% if forloop.counter|divisibleby:2 %}
+           <!-- First Comment -->
+         <div class="container"> 
+           <div class="row">
+             <div class="col-md-7">
+               <div class="panel panel-default arrow right">
+                 <div class="panel-body">
+                   <header class="text-right">
+                     <div class="comment-user"><i class="fa fa-user"></i>                      
+                      <a href="/{{ comment.link }}"> {{ comment.user.username }}</a>                     
+                      </div>
+                     <time class="comment-date" datetime="16-12-2014 01:05">
+                       <i class="fa fa-clock-o"></i>{{ comment.timestamp|timesince }} ago</time>
+                   </header>
+                   <div class="comment-post">
+                     <p  style="font-family: serif;">
+                      {{ comment.content }}
+                     </p>
+                   </div>                   
+                 </div>
+               </div>
+             </div>
+             <div class="hidden-xs">
+               <figure class="">
+                 <div style="width:70px; height: 20px">
+                 {% if comment.image %}
+                 <img class="img-responsive" src="{{ comment.image.url }}" alt="{{ comment.user.username }}">
+                 <figcaption class="text-center"><a href="/{{ comment.link }}">{{ comment.user.username }} </a> </figcaption>
+                 {% else %}                 
+                 <img class="img-responsive" src="{% static 'images/i.jpg'%}" alt="{{ comment.user.username }}">
+                  <figcaption class="text-center"><a href="/{{ comment.link }}">{{ comment.user.username }} </a> </figcaption>
+                 {% endif %}
+                </div>                    
+                </figcaption>
+               </figure>
+             </div>
+           </div>
+         </div>  
+           {% elif not forloop.counter|divisibleby:2 %}           
+           <!-- next Comment -->
+         <div class="container">    
+           <div class="row">
+             <div class="hidden-xs">
+               <figure class="">
+                  <div style="width:70px; height: 20px">
+                      {% if comment.image %}
+                      <img class="img-responsive" src="{{ comment.image.url  }}" alt="">
+                       <figcaption style="color:red;" class="text-center"><a ty href="/{{ comment.link }}"> <span>{{ comment.user.username }}</span> </a> </figcaption>
+                      {% else %}                 
+                      <img class="img-responsive" src="{% static 'images/i.jpg'%}" alt="{{ comment.user.username }}">
+                      <figcaption class="text-center"><a href="/{{ comment.link }}">{{ comment.user.username }} </a> </figcaption>
+                      {% endif %}
+                     </div>
+                 
+               </figure>
+             </div>
+             <div class="col-md-7">
+               <div class="panel panel-default arrow left">
+                 <div class="panel-body">
+                   <header class="text-left">
+                     <div class="comment-user"><i class="fa fa-user"></i>                
+                       <a href="/{{ comment.link }}">{{ comment.user.username }}</a></div>                    
+                       <time class="comment-date" datetime="16-12-2014 01:05"><i class="fa fa-clock-o"></i> 
+                        {{ comment.timestamp|timesince }} ago
+                      </time>
+                   </header>
+                   <div class="comment-post">
+                     <p style="font-family: serif;">
+                        {{ comment.content }}
+                     </p>
+                   </div>                   
+                 </div>
+               </div>
+             </div>
+           </div> 
+        </div>  
+           {% endif %}
+           {% endfor %} 
+     </section>
+<!--############################ Comment End- ###############################-->
+
+
+<!----#######################-Comment Form SECTION  ########################################-->
+<center  class="bottom3">
+    {% if not request.user.is_authenticated %}  
+    <a href="{% url 'account_login' %}" class="btn btn-primary">Login to comment</a>  
+    {% elif request.user.is_authenticated and not request.user.profile.user  %}
+     <a href="/createprofile" class="btn btn-primary">update your profile to activate comment </a>
+     {% else %}
+    <div class="add-comment">
+      <center class="form-group">
+      <form method="POST" action="."  enctype="multipart/form-data">
+        {% csrf_token %}                                
+          {{ form }}    
+        <center><br><button type="submit" class="btn btn-primary">Comment</button></center>  
+        <br> 
+        </center>
+      </form>    
+    </div>     
+    {% endif %}
+    
+</center>        
+
+</div>
+<div class="col-lg-4 top3">
+  {% include 'base/sidebar.html' with most_recent=most_recent category_count=category_count most_popular=most_popular %}
+  {% if post.get_comments %}
+  <div class="col-lg-14 well">     
+            <h3 class="text-center">Latest Tales</h3>            
+            <ul class="list-unstyled">                
+            {% for pt in most_recent|slice:":5" %}
+            {% if pt.publish %}
+ <table>  
+        <tr> 
+            <td> 
+                <span class="text-right"><a class="" style="color:  #152c35;" href="{{ post.get_absolute_url }}">{{ post.title|title }}</a> </span>
+                     <center>                       
+                        <i class="fa fa-comment"></i>&nbsp; ({{ pt.comment_count }})&nbsp; &nbsp;
+                        <i class="fa fa-eye"></i>&nbsp; ({{ pt.view_count }})&nbsp; &nbsp;
+                         <i class="fa fa-thumbs-up"></i>&nbsp; ({{pt.total_likes}})
+                     </center> 
+                </td>
+             <td style="padding: 10px;"> 
+              {% if pt.post.thumbnail %}         
+              <span style=""><img style="width: 40px" src="{{pt.thumbnail.url}}" alt="..." class="img-rounded"></span>&nbsp; &nbsp;
+                {% else %}
+                <span class=""><img style="width: 100px" src="{% static 'images/badge.png'%}" alt="..." class="img-rounded"></span>&nbsp; &nbsp;
+                {% endif %}
+                </td>
+                
+                
+        </tr>
+    </table> 
+                 <hr>
+                {% endif %}
+                {% endfor %}                 
+            </ul>          
+        </div>
+        {% endif %}
+        </div>
+    </div>
+</div>
+  {% else %}
+        <div class="container">
+                <div class="row">
+
+                    <div  class="col-lg-12 text-center  well">
+                          <h3> Dear  {{request.user|upper}} !<br><br>
+                            This Post is Currently Under Review and will be Published Shortly.<br>
+                            You can see <a href="/about/">the About Page</a>  for more informationm<br />
+                            </h2> <br><h3> 
+                            kindly check back later<br>
+                            
+                            Many Thanks<br>
+                          </h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+  {% endif %}
+  
+
+       
+{% endblock %}

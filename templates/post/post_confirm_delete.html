@@ -1,0 +1,29 @@
+{% extends 'base/generic_base.html' %} 
+{% load static %}
+{% block content %}
+
+<center class="container h5 top8 bottom8">
+    <div class="row">       
+      <main class="">
+      <div class="container">
+        <p>Hello<strong> {{request.user}}!</strong> We Believe
+          <p> <strong>"{{ object }}"?</strong><br />
+            is a very interesting post, that will earn you some prize soon
+          </p>
+           Are you really sure you want to delete it?</p>
+           <br />
+        <form method="post">
+            {% csrf_token %}
+            <a href="{{post.get_absolute_url}}" class="btn btn-info">No I Don't!</a>
+            &emsp;&emsp;&emsp;&emsp; 
+            <input type="submit" value="Yes I Am Sure!" class="btn btn-danger">
+        </form>
+      </div>
+    </main>
+         
+  </div>
+</center>>
+
+
+
+{% endblock content %}

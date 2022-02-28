@@ -1,0 +1,20 @@
+{% load static %}
+
+<!DOCTYPE HTML>
+<link rel="shortcut icon" href="{% static 'images/badge.png' type='image/x-icon' %}">
+<html lang="en-gb" class="no-js">   
+                {% include "base/header.html" %}
+        <!-- <div class="loader">
+                <img src="{% static 'images/loading.gif' %}" alt="loading...">                
+        </div> -->
+    <body style="background-color:#eee;">    
+                {% include "base/navbar.html" %}  
+        <div class="bd">
+                {% block content %}
+                {% endblock content %}
+        </div>         
+        <center> {% include "base/footer.html"%}</center>      
+                {% include "base/scripts.html" %}
+    </body>
+
+</html>

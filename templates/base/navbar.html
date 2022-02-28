@@ -1,0 +1,58 @@
+{% load static %}
+<div class="container">
+  <div class="row">
+    <div class="">
+    
+<nav class="navbar navbar-expand-sm navbar-light bg-light navbar-fixed-top">
+    <div class="navbar-header">        
+            <a href="/" class="navbar-brand scroll-top logo animated bounceInLeft rollIn">
+            <b>
+              <img class="img-circle" style="width:50px;" src="{% static 'images/badge.png' %}"/>
+              <i style="color:white;">TalesArena.com</i>
+            </b>
+            </a>
+      </div>
+  <button style="color:mintcream;" class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNavDropdown">
+    <ul class="navbar-nav text-center">
+      <li  {% if request.path == "/" %} class="nav-item active" {% endif %}>
+        <a class="nav-link" href="/"> Home <span class="sr-only">(current)</span></a>
+      </li>
+      <li  {% if request.path == '/post/' %} class="nav-item active" {% endif %}>
+        <a class="nav-link" href="/post"> Tales </a>
+      </li>
+      <li  {% if request.path == '/summarizer/' %} class="nav-item active" {% endif %}>       
+        <a class="nav-link" href="/summarizer"> Summarizer </a>
+      </li> 
+      <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+           Account
+          </a>
+          <div class="dropdown-menu text-center" aria-labelledby="navbarDropdownMenuLink" style="background-color: #152c35; color:#cddc39; border-color: #1c638b;">
+          {% if not request.user.is_authenticated %}
+            <a class="dropdown-item" href="{% url 'account_login' %}?next={{request.path}}"> Login</a>
+            <br>
+            <a class="dropdown-item" href="{% url 'account_signup' %}"> Sign Up </a>
+          {% else %}
+            <a class="dropdown-item" href="{% url 'account_logout' %}"> Log Out</a>
+            {% if request.user.is_authenticated and  request.user.profile.user %}
+               <br>
+            <a class="dropdown-item" href="{% url 'post-create' %}"> Create Tales </a>
+            {% endif %}
+            {% endif %}
+          </div>
+        </li>      
+      <li{% if request.path == '/about/' %} class="nav-item active" {% endif %}>
+          <a class="nav-link" href="/about"> About Us </a>
+        </li>
+      <li{% if request.path == '/contact/' %} class="nav-item active" {% endif %}>
+          <a class="nav-link" href="/contact"> Contact </a>
+        </li>      
+    </ul>
+  </div>
+</nav>
+</div>
+</div>
+</div>

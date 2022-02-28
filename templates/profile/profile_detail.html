@@ -1,0 +1,382 @@
+{% extends 'base/generic_base.html' %} 
+{% load static %}
+ {% load bootstrap_pagination %}
+ {% load social_share %}
+{% block content %}
+
+<style type="text/css">
+.prof {position: relative; right: 160px;}
+ @media screen and (max-width:700px)
+ {.prof {position: relative; right: -0px;
+ padding-left: 20px ;
+ padding-right: 20px ;
+      }
+      }
+
+</style>   
+<!-- Intro Section-->
+<center class="prof">
+
+<section class="top2">        
+        <div class=
+        "container">
+          <div class="row">            
+            <div class="col-md-3 col-md-offset-3 well">           
+                <span class="story-img" style="outline: 1px ridge #152c35;">
+                    {% if profile.profile_photo %}
+                    <img src="{{ profile.profile_photo.url }}"
+                      style="width:auto; height:215px; margin-top:6px;" class="img-responsive img-rounded"/>
+                      {% else %}
+                      <img src="{% static 'images/i.jpg' %}"
+                      style="width:auto; height:215px; margin-top:6px;" class="img-responsive img-rounded"/>
+                      {% endif %}
+                </span>                      
+                 <p class="h5 text-center" style="color:#152c35">
+                      <strong> 
+                        {{ profile.first_name|upper }}&ensp; {{ profile.last_name|upper }} <br>                                              
+                        </strong>
+                        </p> 
+            </div>                   
+            <div class="col-md-6 well"> 
+                  <table>       
+                        <tr>
+                            <td class="h3"><span class="fa fa-user" style="color:#152c35;">&nbsp;</span> </td>
+                            <td style="color:#152c35"><strong>{{ profile.user.username }}</strong></td>
+                        </tr>
+                        <tr>
+                            <td class="h3"><span class="fa fa-envelope" style="color:#152c35;">&nbsp;</span> </td>
+                            <td style="color:#152c35"><strong>{{ profile.user.email }}</strong></td>
+                        </tr>
+                        <tr>
+                            {% if profile.phone_number %}
+                            <td class="h3"><span class="fa fa-whatsapp" style="color:#152c35;"> &ThinSpace;</td>                           
+                              <td style="color:#152c35"><strong>{{ profile.phone_number }}</strong></td>
+                            {% else %}
+                            {{Null}}
+                            {% endif %} 
+                            
+                        </tr>
+                        <tr>
+                            {% if profile.facebook or profile.twitter or profile.linkedin or profile.instagram %}
+                            <td class="h3"><i class="fa fa-handshake-o" style="color:#152c35;"></i>&nbsp; </td>
+                            {% endif %}
+                            <td>
+                                <span class="text-center">&nbsp;&nbsp;                                 
+                                    
+                                    {% if profile.facebook %}
+                                    <a class="btn btn-primary btn-xs" href="{{profile.facebook}}" target="_blank"><i class="fa fa-facebook"></i></a>&nbsp;
+                                    {% else %}
+                                    {{Null}}
+                                    {% endif %}
+
+                                    {% if profile.twitter %}
+                                    <a class="btn btn-info  btn-xs" href="{{profile.twitter}}" target="_blank"><i class="fa fa-twitter"></i></a>&nbsp;
+                                    {% else %}
+                                    {{Null}}
+                                    {% endif %}
+
+                                    {% if profile.linkedin %}
+                                    <a class="btn btn-primary btn-xs" href="{{profile.linkedin}}" target="_blank"><i class="fa fa-linkedin"></i></a>&nbsp; 
+                                    {% else %}
+                                    {{Null}}
+                                    {% endif %}
+
+                                    {% if profile.instagram %}
+                                    <a style="background: orange;" class="btn btn-warning  btn-xs"  href="{{profile.instagram}}" target="_blank"><i class="fa fa-instagram"></i></a>&nbsp;
+                                    {% else %}
+                                    {{Null}}
+                                    {% endif %}
+                                    
+                                </span>
+                            </td>
+                        </tr>
+                        <tr>
+                            {%if profile.bio %}                           
+                                <td class="h1 label label-danger top3">Bio:</td>                           
+                                <td style="color:#152c35" class="text-justify">
+                                   &ensp;{{ profile.bio|truncatechars:300 }}
+                                </td>                     
+                            {% endif %} 
+                        </tr>
+               
+                    {% if profile.user == request.user %} 
+                    <tr>
+                      
+                      <td class="h3"><span class="" style="color:#152c35;">&nbsp;</span> </td>                                                                        
+                        <td class="h6 pull-left">    
+                          <a class="btn btn-warning btn-xs" href="{% url 'post-create' %}">Create Tales</a>&ensp;&ensp;
+                          
+                          <a class="btn btn-info btn-xs" href="{% url 'update-profile' pk=profile.pk %}">
+                              <span class="text-info fa fa-edit" style="color:#152c35;">&nbsp;</span>
+                              Update Profile</a>  &ensp;&ensp;   
+                              <details> 
+                                <summary class="btn btn-danger btn-xs" > <i class="fa fa-trash"></i>    </summary>                    
+                          <a class="btn btn-danger btn-xs" href="{% url 'delete-profile' pk=profile.pk %}">
+                            <span class="text-danger fa fa-trash" style="color:#152c35;">&nbsp;</span>
+                            Delete Profile
+                             </a>                             
+                             </details>                                         
+                        </td> 
+                              
+                    </tr>                        
+                    {% endif %} 
+                 
+                  </table>
+                </div>               
+              </div>
+          </div>
+    </section> 
+                   
+<header class="text-right"></header>
+</center><br>
+ <!--Blog Body-->
+
+
+
+         
+ <!-------------------------------------------------------->
+ <div class="container">
+  <div class="row">      
+    <div class="col-lg-8">             
+      <!--/Blog Posts BY USER--> 
+    {% for post in object_list|slice:":1" %}
+        {% if post.featured and profile.user == request.user %}    
+      <center class="text-center pane well">          
+          <span class="h3">Your Posts
+          <i class="h3" style="color:#152c35">@{{ profile.user }}:</i>
+        </span> 
+          {% elif post.featured and not profile.user == request.user %}
+          <span class="h2">Posts By:
+          <i class="h3" style="color:#152c35">{{ profile.user }}</i>
+        </span>  
+      </center>   
+      {% endif %}            
+      {% endfor %}     
+      
+    </div>
+  </div>
+</div>
+<!-----###################################################-----> 
+<section class="container">
+  <div class="row">
+      <center class="col-lg-8">
+          <div class=""> 
+              <div class="row col-lg-12"> 
+                {% for post in object_list %}
+{% if profile.user == request.user %}
+                {% if not forloop.counter|divisibleby:2 %}           
+                <div class="col-xl-6 top3">
+                  <div class="">  
+                    <center>            
+                      <a href="{{ post.get_absolute_url }}">          
+                            {% if post.thumbnail %}
+                            <img src="{{ post.thumbnail.url }}" alt="{{ post.title|title }}" class="img-rounded img-responsive post-list-img"/>
+                            {% else %}
+                            <img src="{% static 'images/badge.png'%}" alt="{{ post.title|title }}" class="img-rounded img-responsive post-list-img"/>
+                            {% endif %}
+                      </a>                         
+                    </center>                            
+                          <center class ="h4"><a class="label-danger" style="color: white; border-color: #1c638b;" href="{{ post.get_absolute_url }}">{{ post.title|title }}</a>
+                              <header class="text-center"> 
+                                  {% for cat in post.categories.all|slice:":5" %}
+                                  <span class="h5"><strong class="text-danger">#{{ cat }}</strong></span>
+                                  {% endfor %}                                    
+                                <i class="fa fa-"></i>                   
+                              </header>
+                          </center>                                                   
+                                      
+                            <div class="text-justify panel panel-body"> {{post.overview|safe|capfirst|truncatechars:700}}<br><a href="{{post.get_absolute_url}}">&nbsp; See More</a> </div> 
+                              <div>                    
+                              <ul class="list-inline">
+                                <li>
+                                  {% if post.author.profile_photo %}
+                                      <span class=""><img style="width: 30px; height: 30px" src="{{post.author.profile_photo.url}}" alt="..." class="img-circle"></span>&nbsp; &nbsp;
+                                    {% else %}
+                                    <span class=""><img style="width: 30px; height: 30px" src="{% static 'images/i.jpg'%}" alt="..." class="img-circle"></span>&nbsp; &nbsp;
+                                    {% endif %}
+                                </li>
+                                <li> <a class="label label-success" href="/profile/{{ post.author.user.profile.pk }}/">{{post.author|upper}}</a></li>               
+                                <li> <span class=""> <a class="label label-default" href="{{ post.get_absolute_url }}"><i class="fa fa-clock-o"></i> {{ post.timestamp|timesince }} ago</a></span></li>
+                                <li> <span class=""> <a class="label label-default" href="{{ post.get_absolute_url }}"><i class="fa fa-comment"></i> {{ post.comment_count }} comments</a> </span> </li>
+                                <li> <span class=""> <a class="label label-default" href="{{ post.get_absolute_url }}"><i class="fa fa-eye"></i> {{ post.view_count }} views</a></span> </li>
+                                <li> <span class=""> <a class="label label-default" href="{{ post.get_absolute_url }}"><i class="fa fa-like"></i> {{post.total_likes}} like{{post.total_likes|pluralize}} </a></span> </li>     
+                            </ul>
+                          </div>                       
+                          <p>  </p>                                                               
+                      </div>   
+                      </div>                                         
+                 {% endif %}
+
+                                  
+          {% if post.featured and forloop.counter|divisibleby:2 %}
+          <div class="col-xl-6 top3">
+            <div class="">  
+              <center>            
+                <a href="{{ post.get_absolute_url }}">          
+                      {% if post.thumbnail %}
+                      <img src="{{ post.thumbnail.url }}" alt="{{ post.title|title }}" class="img-rounded img-responsive post-list-img"/>
+                      {% else %}
+                      <img src="{% static 'images/badge.png'%}" alt="{{ post.title|title }}" class="img-rounded img-responsive post-list-img"/>
+                      {% endif %}
+                </a>                         
+              </center>                            
+                    <center class ="h4"><a class="label-danger" style="color: white; border-color: #1c638b;" href="{{ post.get_absolute_url }}">{{ post.title|title }}</a>
+                        <header class="text-center"> 
+                            {% for cat in post.categories.all|slice:":5" %}
+                            <span class="h5"><strong class="text-danger">#{{ cat }}</strong></span>
+                            {% endfor %}                                    
+                          <i class="fa fa-"></i>                   
+                        </header>
+                    </center>                                                   
+                                
+                      <div class="text-justify panel panel-body"> {{post.overview|safe|capfirst|truncatechars:700}}<br><a href="{{post.get_absolute_url}}">&nbsp; See More</a> </div> 
+                        <div>                    
+                        <ul class="list-inline">
+                          <li>
+                            {% if post.author.profile_photo %}
+                                <span class=""><img style="width: 30px; height: 30px" src="{{post.author.profile_photo.url}}" alt="..." class="img-circle"></span>&nbsp; &nbsp;
+                              {% else %}
+                              <span class=""><img style="width: 30px; height: 30px" src="{% static 'images/i.jpg'%}" alt="..." class="img-circle"></span>&nbsp; &nbsp;
+                              {% endif %}
+                          </li>
+                          <li> <a class="label label-success" href="/profile/{{ post.author.user.profile.pk }}/">{{post.author|upper}}</a></li>               
+                          <li> <span class=""> <a class="label label-default" href="{{ post.get_absolute_url }}"><i class="fa fa-clock-o"></i> {{ post.timestamp|timesince }} ago</a></span></li>
+                          <li> <span class=""> <a class="label label-default" href="{{ post.get_absolute_url }}"><i class="fa fa-comment"></i> {{ post.comment_count }} comments</a> </span> </li>
+                          <li> <span class=""> <a class="label label-default" href="{{ post.get_absolute_url }}"><i class="fa fa-eye"></i> {{ post.view_count }} views</a></span> </li>
+                          <li> <span class=""> <a class="label label-default" href="{{ post.get_absolute_url }}"><i class="fa fa-like"></i> {{post.total_likes}} like{{post.total_likes|pluralize}} </a></span> </li>     
+                      </ul>
+                    </div>                       
+                    <p>  </p>                                                               
+                </div>   
+                </div>  
+          {% endif %} 
+
+ {% elif post.featured and not profile.user == request.user %}                                       
+          {% if post.featured and not forloop.counter|divisibleby:2 %}  
+          <div class="col-xl-6 top3">
+            <div class="">  
+              <center>            
+                <a href="{{ post.get_absolute_url }}">          
+                      {% if post.thumbnail %}
+                      <img src="{{ post.thumbnail.url }}" alt="{{ post.title|title }}" class="img-rounded img-responsive post-list-img"/>
+                      {% else %}
+                      <img src="{% static 'images/badge.png'%}" alt="{{ post.title|title }}" class="img-rounded img-responsive post-list-img"/>
+                      {% endif %}
+                </a>                         
+              </center>                            
+                    <center class ="h4"><a class="label-danger" style="color: white; border-color: #1c638b;" href="{{ post.get_absolute_url }}">{{ post.title|title }}</a>
+                        <header class="text-center"> 
+                            {% for cat in post.categories.all|slice:":5" %}
+                            <span class="h5"><strong class="text-danger">#{{ cat }}</strong></span>
+                            {% endfor %}                                    
+                          <i class="fa fa-"></i>                   
+                        </header>
+                    </center>                                                   
+                                
+                      <div class="text-justify panel panel-body"> {{post.overview|safe|capfirst|truncatechars:700}}<br><a href="{{post.get_absolute_url}}">&nbsp; See More</a> </div> 
+                        <div>                    
+                        <ul class="list-inline">
+                          <li>
+                            {% if post.author.profile_photo %}
+                                <span class=""><img style="width: 30px; height: 30px" src="{{post.author.profile_photo.url}}" alt="..." class="img-circle"></span>&nbsp; &nbsp;
+                              {% else %}
+                              <span class=""><img style="width: 30px; height: 30px" src="{% static 'images/i.jpg'%}" alt="..." class="img-circle"></span>&nbsp; &nbsp;
+                              {% endif %}
+                          </li>
+                          <li> <a class="label label-success" href="/profile/{{ post.author.user.profile.pk }}/">{{post.author|upper}}</a></li>               
+                          <li> <span class=""> <a class="label label-default" href="{{ post.get_absolute_url }}"><i class="fa fa-clock-o"></i> {{ post.timestamp|timesince }} ago</a></span></li>
+                          <li> <span class=""> <a class="label label-default" href="{{ post.get_absolute_url }}"><i class="fa fa-comment"></i> {{ post.comment_count }} comments</a> </span> </li>
+                          <li> <span class=""> <a class="label label-default" href="{{ post.get_absolute_url }}"><i class="fa fa-eye"></i> {{ post.view_count }} views</a></span> </li>
+                          <li> <span class=""> <a class="label label-default" href="{{ post.get_absolute_url }}"><i class="fa fa-like"></i> {{post.total_likes}} like{{post.total_likes|pluralize}} </a></span> </li>     
+                      </ul>
+                    </div>                       
+                    <p>  </p>                                                               
+                </div>   
+                </div>         
+                  {% endif %}
+
+                                  
+          {% if post.featured and forloop.counter|divisibleby:2 %}  
+          <div class="col-xl-6 top3">
+            <div class="">  
+              <center>            
+                <a href="{{ post.get_absolute_url }}">          
+                      {% if post.thumbnail %}
+                      <img src="{{ post.thumbnail.url }}" alt="{{ post.title|title }}" class="img-rounded img-responsive post-list-img"/>
+                      {% else %}
+                      <img src="{% static 'images/badge.png'%}" alt="{{ post.title|title }}" class="img-rounded img-responsive post-list-img"/>
+                      {% endif %}
+                </a>                         
+              </center>                            
+                    <center class ="h4"><a class="label-danger" style="color: white; border-color: #1c638b;" href="{{ post.get_absolute_url }}">{{ post.title|title }}</a>
+                        <header class="text-center"> 
+                            {% for cat in post.categories.all|slice:":5" %}
+                            <span class="h5"><strong class="text-danger">#{{ cat }}</strong></span>
+                            {% endfor %}                                    
+                          <i class="fa fa-"></i>                   
+                        </header>
+                    </center>                                                   
+                                
+                      <div class="text-justify panel panel-body"> {{post.overview|safe|capfirst|truncatechars:700}}<br><a href="{{post.get_absolute_url}}">&nbsp; See More</a> </div> 
+                        <div>                    
+                        <ul class="list-inline">
+                          <li>
+                            {% if post.author.profile_photo %}
+                                <span class=""><img style="width: 30px; height: 30px" src="{{post.author.profile_photo.url}}" alt="..." class="img-circle"></span>&nbsp; &nbsp;
+                              {% else %}
+                              <span class=""><img style="width: 30px; height: 30px" src="{% static 'images/i.jpg'%}" alt="..." class="img-circle"></span>&nbsp; &nbsp;
+                              {% endif %}
+                          </li>
+                          <li> <a class="label label-success" href="/profile/{{ post.author.user.profile.pk }}/">{{post.author|upper}}</a></li>               
+                          <li> <span class=""> <a class="label label-default" href="{{ post.get_absolute_url }}"><i class="fa fa-clock-o"></i> {{ post.timestamp|timesince }} ago</a></span></li>
+                          <li> <span class=""> <a class="label label-default" href="{{ post.get_absolute_url }}"><i class="fa fa-comment"></i> {{ post.comment_count }} comments</a> </span> </li>
+                          <li> <span class=""> <a class="label label-default" href="{{ post.get_absolute_url }}"><i class="fa fa-eye"></i> {{ post.view_count }} views</a></span> </li>
+                          <li> <span class=""> <a class="label label-default" href="{{ post.get_absolute_url }}"><i class="fa fa-like"></i> {{post.total_likes}} like{{post.total_likes|pluralize}} </a></span> </li>     
+                      </ul>
+                    </div>                       
+                    <p>  </p>                                                               
+                </div>   
+                </div>                                     
+             {% endif %}
+             {% endif %}      
+             {% empty %}
+             {% if profile.user == request.user %}
+                 <center class="well h2">Dear {{ profile.user }} You Have Not Publised Any Tale Yet <hr> 
+                 <a class="btn btn-warning" href="{% url 'post-create' %}">
+                    Create One Now! </a>
+                 </center>                                  
+                 {% else %}
+                 <center class = "h2"><mark>{{ profile.user }}</mark> cureently has no posts</center>
+                 {% endif %}
+                {% endfor %}                                    
+       
+                 </div>
+        <!--Pagniation-->
+                {% if is_paginated %}      
+                <div class="container">
+                    <div class="row table">
+                        <div class="text-center col-lg-8">
+                          <a class="btn btn-default btn-hover btn-block toggle-pagination"><i class="glyphicon glyphicon-plus"></i> Toggle more Tales</a>
+                          <ul class="pagination pagination-responsive pagination-lg">    
+                            {% if page_obj.has_previous %}
+                              <li><a href="{{ request.path }}?page={{ page_obj.previous_page_number }}">&laquo;</a></li>
+                              {% endif %}
+                              <li class="disabled"><span> pages {{ page_obj.number }} of {{ page_obj.paginator.num_pages }} </span></li>
+                              {% if page_obj.has_next %}
+                              <li><a href="{{ request.path }}?page={{ page_obj.next_page_number }}">&raquo;</a></li>
+                              {% endif %}
+                          </ul>
+                        </div>          
+                    </div>
+                </div>
+                {% endif %}
+ </div>  
+</center>                            <!--Pagniation End-->
+<!-----###################################################-----> 
+                                         
+    <aside class="col-lg-4">
+      {% include 'base/sidebar.html' with most_recent=most_recent category_count=category_count most_popular=most_popular %}
+    </aside>
+  </div>
+</section>
+{% endblock %}

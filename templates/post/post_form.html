@@ -1,0 +1,157 @@
+{% extends 'base/generic_base.html' %}
+{% load crispy_forms_tags %}
+{% load widget_tweaks %}
+{% block content %}
+{% if request.user.profile.user %}
+<p class="text-center h2 top2">{{ mytitle }}</p>
+<p class="text-center h4 top2"><em>{{ subtitle }}</em></p>
+{% if form %}
+<section class="container top3"> 
+    <div class="row">            
+        <div class="col-lg-12">
+                <center><a href="/about/#tips" class="text-center panel">CheckOut Tips For creating Award Winning Tales</a></center>    
+            <div class="">               
+                {{ form.media }} 
+                <form method="POST" action="." enctype="multipart/form-data" class="well form-horizontal">
+                    {% csrf_token %}   
+                   <fieldset> 
+                    {% for hidden_field in form.hidden_fields %}
+                      {{ hidden_field }}                    
+                    {% endfor %}
+                  
+                    {% if form.non_field_errors %}
+                      <div class="alert alert-danger" role="alert">
+                        {% for error in form.non_field_errors %}
+                          {{ error }}
+                        {% endfor %}
+                      </div>
+                    {% endif %}
+                
+                       
+                    <select class="my-select" name="author" required type='hidden'>                                     
+                            <option value="1" selected>{{the_author}}</option>                                                                    
+                    </select>
+
+                    {%if form.author.errors %}
+                    <div class="alert alert-danger" role="alert">
+                        You are Not a valid Author Please <a href="/contact/"> The Contact Admin </a> 
+                    </div> 
+                    {%endif%}
+                    <div class="form-group">
+                            {%if form.title.errors %}<div class="alert alert-danger" role="alert">{{ form.title.errors }}</div> {%endif%}                            
+                            <label class="pull-left control-label">{{ form.title.label_tag }}*</label>
+                            <div class="col-md-6 inputGroupContainer">
+                            <div class="input-group">
+                            <span class="input-group-addon"><i class="fa fa-info-circle"></i></span>                        
+                             {{ form.title }}                                               
+                              </div>
+                            </div>
+                        </div>
+                       <div class="form-group">
+                            {%if form.overview.errors %}<div class="alert alert-danger" role="alert">{{ form.overview.errors }}</div> {%endif%}                            
+                            <label class="pull-left control-label">{{ form.overview.label_tag }}*</label>
+                                <div class="col-md-12 inputGroupContainer">
+                                    <div class="input-group">
+                                    <p>
+                                       <span class="input-group-addon"><i class=" fa fa-align-center"></i></span>
+                                        {{ form.overview }}     
+                                    </p>                       
+                                    </div>
+                                    {% if form.overview.help_text %}
+                                    <small class="form-text text-muted">{{form.overview.help_text }}</small>
+                                    {% endif %}
+                                </div>
+                         </div>
+                         {%if form.content.errors %}<div class="alert alert-danger" role="alert">{{ form.content.errors }}</div> {%endif%} 
+                   <details> 
+                       <summary class="text-center label label-info">{{ form.content.label_tag }} </summary>
+                      <div class="form-group">                                
+                                    <label class="control-label"></label>
+                                    <div class="col-md-12  inputGroupContainer">
+                                        <div class="input-group">                                           
+                                                 <span class="input-group-addon"><i class=" fa fa-align-center"></i></span>
+                                                 {{ form.content }}                              
+                                        </div>
+                                        {% if form.content.help_text %}
+                                        <small class="form-text text-muted">{{ form.content.help_text }}</small>
+                                        {% endif %}
+                                    </div>
+                             </div>
+                    </details>
+                       <br>
+                             <div class="form-group">
+                                    <div class="col-md-6 col-md-offset-4 inputGroupContainer">
+                                    {%if form.thumbnail.errors %}<div class="alert alert-danger" role="alert">{{ form.thumbnail.errors }}</div> {%endif%} 
+                                    <label class="pull-left control-label">{{ form.thumbnail.label_tag }}</label>                                    
+                                        <div class="input-group">
+                                            <span class="input-group-addon"><i class="fa fa-image"></i></span>                                
+                                                {{ form.thumbnail }}                                                             
+                                        </div>
+                                    </div>
+                             </div>
+                             <div class="form-group">
+                                    <div class="col-md-6 col-md-offset-3 inputGroupContainer">
+                                    {%if form.categories.errors %}<div class="alert alert-danger" role="alert">{{ form.categories.errors }}</div> {%endif%}
+                                    {%if form.other_categories.errors %}<div class="alert alert-danger" role="alert">{{ form.other_categories.errors }}</div> {%endif%}
+                                    <label class="pull-left control-label">{{ form.categories.label_tag }}</label>                                   
+                                    <div class="input-group">
+                                   <p> <span class="input-group-addon"><i class="fa fa-list"></i></span>
+                                  {{form.categories }}  {{ form.other_categories }}  </p>
+                                
+                                </div>
+                                    </div>
+                             </div>
+                             <div class="form-group">
+                                    <label class="pull-left control-label"></label>
+                                    <div class="col-md-6 col-md-offset-4 inputGroupContainer">
+                                    <div class="input-group">                                    
+                                    <input type="checkbox" name="terms" value="True" required> 
+                                    <a href="/about/#terms"> I Accept all Talesarena Publishing Terms and Conditions </a>
+                                        </div>
+                                    </div>
+                             </div> 
+                    </fieldset>                    
+                    <center><button class="btn btn-primary" type="submit">Submit</button></center>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
+{% else %}
+
+<center style="position:relative; padding-bottom: 9vw;"><hr>
+    {% if request.user.is_authenticated %}
+    <p class="h3"> you have to update your profile to create post</p>    
+    <a href="/createprofile" class="btn btn-primary">click here to update your profile</a>
+    {% else %}
+     <p class="h3"> you have to login to access this page</p>    
+    <a href="{% url 'account_login' %}?next={{request.path}}" class="btn btn-primary">login</a>
+</center><hr>
+
+
+
+{% endif %}
+{% endif %}
+
+
+<script>
+    function myFunctiont() {
+        var element = document.getElementById("id_categories");      
+       element.classList.add("form-control");
+    }
+myFunctiont();  
+    </script>
+<script>
+function uncheck() {    
+    document.getElementById("id_publish").checked = false;
+}
+uncheck();
+</script>
+<script>
+    function author() {    
+        document.getElementById("id_author").value = '';
+    }
+  
+    </script>
+{% endif %}
+{% endblock content %}

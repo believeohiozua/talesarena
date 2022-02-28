@@ -1,0 +1,171 @@
+{% extends 'base/generic_base.html' %} 
+{% load static %}
+ {% load bootstrap_pagination %}
+ {% load social_share %}
+{% block content %}
+
+<!-- Hero Section-->
+    <!--Slider Start-->
+<!-- Intro Section-->
+<section class="intro">
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-10">
+            <div class="text-big well top2">
+                <strong><p class="h2 text-center">
+                Search Result</p></strong>              
+            </div>
+        </div>
+  
+       </div>
+     </div>
+  </section>           
+<!--Blog Body-->
+
+<section class="container">
+  <div class="row">
+      <center class="col-lg-8">
+          <div class=""> 
+              <div class="row col-lg-12"> 
+        {% for post in numbers %}   
+        {% if post.publish %}                       
+          {% if not forloop.counter|divisibleby:2 %}
+              <div class="col-xl-6 top3">
+              <div class="">  
+                <center>            
+                  <a href="{{ post.get_absolute_url }}">          
+                        {% if post.thumbnail %}
+                        <img src="{{ post.thumbnail.url }}" alt="{{ post.title|title }}" class="img-rounded img-responsive post-list-img"/>
+                        {% else %}
+                        <img src="{% static 'images/badge.png'%}" alt="{{ post.title|title }}" class="img-rounded img-responsive post-list-img"/>
+                        {% endif %}
+                  </a>                         
+                </center>                            
+                      <center class ="h4"><a class="label-danger" style="color: white; border-color: #1c638b;" href="{{ post.get_absolute_url }}">{{ post.title|title }}</a>
+                          <header class="text-center"> 
+                              {% for cat in post.categories.all|slice:":5" %}
+                              <span class="h5"><strong class="text-danger">#{{ cat }}</strong></span>
+                              {% endfor %}                                    
+                            <i class="fa fa-"></i>                   
+                          </header>
+                      </center>                                                   
+                                  
+                        <div class="text-justify panel panel-body"> {{post.content|safe|capfirst|truncatechars:700}}<br><a href="{{post.get_absolute_url}}">&nbsp; See More</a> </div> 
+                          <div>                    
+                          <ul class="list-inline">
+                            <li>
+                              {% if post.author.profile_photo %}
+                                  <span class=""><img style="width: 30px; height: 30px" src="{{post.author.profile_photo.url}}" alt="..." class="img-circle"></span>&nbsp; &nbsp;
+                                {% else %}
+                                <span class=""><img style="width: 30px; height: 30px" src="{% static 'images/i.jpg'%}" alt="..." class="img-circle"></span>&nbsp; &nbsp;
+                                {% endif %}
+                            </li>
+                            <li> <a class="label label-success" href="/profile/{{ post.author.user.profile.pk }}/">{{post.author|upper}}</a></li>               
+                            <li> <span class=""> <a class="label label-default" href="{{ post.get_absolute_url }}"><i class="fa fa-clock-o"></i> {{ post.timestamp|timesince }} ago</a></span></li>
+                            <li> <span class=""> <a class="label label-default" href="{{ post.get_absolute_url }}"><i class="fa fa-comment"></i> {{ post.comment_count }} comments</a> </span> </li>
+                            <li> <span class=""> <a class="label label-default" href="{{ post.get_absolute_url }}"><i class="fa fa-eye"></i> {{ post.view_count }} views</a></span> </li>
+                            <li> <span class=""> <a class="label label-default" href="{{ post.get_absolute_url }}"><i class="fa fa-like"></i> {{post.total_likes}} like{{post.total_likes|pluralize}} </a></span> </li>     
+                        </ul>
+                      </div>                       
+                      <p>  </p>                                                               
+                  </div>   
+                  </div>                   
+                  {% endif %}
+
+                  
+                  {% if forloop.counter|divisibleby:2 %}
+                  <div class="col-xl-6 top3">
+                  <div class=""> 
+                    <center>             
+                  <a href="{{ post.get_absolute_url }}">          
+                        {% if post.thumbnail %}
+                        <img src="{{ post.thumbnail.url }}" alt="{{ post.title|title }}" class="img-rounded img-responsive post-list-img"/>
+                        {% else %}
+                        <img src="{% static 'images/badge.png' %}" alt="{{ post.title|title }}" class="img-rounded img-responsive post-list-img"/>
+                        {% endif %}
+                  </a>                         
+                    </center>                            
+                  <center class ="h4"><a class="label-danger" style="color: white; border-color: #1c638b;" href="{{ post.get_absolute_url }}">{{ post.title|title }}</a>
+                      <header class="text-center"> 
+                          {% for cat in post.categories.all|slice:":5" %} 
+                          <span class="h5"><strong class="text-danger">#{{ cat }}</strong></span>
+                          {% endfor %}                                    
+                        <i class="fa fa-"></i>                   
+                      </header>
+                  </center>                                                   
+                                  
+                  <div class="text-justify panel panel-body"> {{post.content|safe|capfirst|truncatechars:700}}<br><a href="{{post.get_absolute_url}}"> &nbsp; See More</a> </div> 
+                          <div>                    
+                          <ul class="list-inline">
+                            <li>
+                              {% if post.author.profile_photo %}
+                                  <span class=""><img style="width: 30px; height: 30px" src="{{post.author.profile_photo.url}}" alt="..." class="img-circle"></span>&nbsp; &nbsp;
+                                {% else %}
+                                <span class=""><img style="width: 30px; height: 30px" src="{% static 'images/i.jpg'%}" alt="..." class="img-circle"></span>&nbsp; &nbsp;
+                                {% endif %}
+                            </li>
+                            <li> <a class="label label-success" href="/profile/{{ post.author.user.profile.pk }}/">{{post.author|upper}}</a></li>               
+                            <li> <span class=""> <a class="label label-default" href="{{ post.get_absolute_url }}"><i class="fa fa-clock-o"></i> {{ post.timestamp|timesince }} ago</a></span></li>
+                            <li> <span class=""> <a class="label label-default" href="{{ post.get_absolute_url }}"><i class="fa fa-comment"></i> {{ post.comment_count }} comments</a> </span> </li>
+                            <li> <span class=""> <a class="label label-default" href="{{ post.get_absolute_url }}"><i class="fa fa-eye"></i> {{ post.view_count }} views</a></span> </li>
+                            <li> <span class=""> <a class="label label-default" href="{{ post.get_absolute_url }}"><i class="fa fa-like"></i> {{post.total_likes}} like{{post.total_likes|pluralize}} </a></span> </li>     
+                        </ul>
+                      </div>                             
+                <p>  </p>                                                               
+                  </div>   
+                  </div>               
+                  {% endif %}
+                  {% endif %}
+                  {% empty %}
+
+                  <center class = "h2">There is no result for   {{query}} Search </center>                 
+                {% endfor %} 
+                  </div>    
+                  <!--Pagniation-->
+                  <!--Pagniation-->    
+                <div class="container">
+                    <div class="row table">
+                        <div class="text-center col-lg-8">
+                          <a class="btn btn-default btn-hover btn-block toggle-pagination"><i class="glyphicon glyphicon-plus"></i> Toggle more Tales</a>
+                          <ul class="pagination pagination-responsive pagination-lg">    
+                            {% if numbers.has_previous %}
+                              <li><a class="infinite-more-link" href="{{ request.path }}?page={{numbers.previous_page_number}}">&laquo;</a></li>
+                              {% endif %}
+                              <li class="disabled"><span> pages {{  numbers.number }} of {{  numbers.paginator.num_pages }} </span></li>
+                              {% if numbers.has_next %}
+                              <li><a class="infinite-more-link" href="{{ request.path }}?page={{numbers.next_page_number}}">&raquo;</a></li>
+                              {% endif %}
+                          </ul>
+                        </div>          
+                    </div>
+                </div>
+              
+                <div class="loading" style="display: none;">
+                    Loading...
+                  </div>
+                  <script>
+                      var infinite = new Waypoint.Infinite({
+                        element: $('.infinite-container')[0],
+                        onBeforePageLoad: function () {
+                          $('.loading').show();
+                        },
+                        onAfterPageLoad: function ($items) {
+                          $('.loading').hide();
+                        }
+                      });
+                    </script>
+                 <!--Pagniation--> 
+
+        </div>
+      </center> 
+              
+              <!--Pagniation End-->
+    <!-----###################################################-----> 
+        <aside class="col-lg-4 top3">
+          {% include 'base/sidebar.html' with most_recent=most_recent category_count=category_count most_popular=most_popular %}
+        </aside>
+    </div>
+</section>   
+            
+
+{% endblock %}

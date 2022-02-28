@@ -1,0 +1,175 @@
+{% extends 'base/generic_base.html' %} 
+{% load crispy_forms_tags %}
+{% load static %}
+{% block content %} 
+
+
+<div class="container set-pad">       
+        <div class="col-lg-12">
+      <center><h1>Profile Update </h1></center>                   
+            
+            {{form.media }}
+            <form method="POST" action="." enctype="multipart/form-data" class="well form-horizontal">
+                {% csrf_token %}
+                <fieldset> 
+                        {% for hidden_field in form.hidden_fields %}
+                        {{ hidden_field }}                    
+                      {% endfor %}
+                    
+                      {% if form.non_field_errors %}
+                        <div class="alert alert-danger" role="alert">
+                          {% for error in form.non_field_errors %}
+                            {{ error }}
+                          {% endfor %}
+                        </div>
+                      {% endif %}
+                        <div class="form-group">
+                                {% if u_form.username.errors %}<div class="alert alert-danger" role="alert">{{u_form.username.errors }}</div> {%endif%}
+                                {% if u_form.email.errors %}<div class="alert alert-danger" role="alert">{{u_form.email.errors }}</div> {%endif%}   
+                                <label class="pull-left control-label"></label>
+                                <div class="col-md-10  inputGroupContainer">
+                                <div class="input-group">
+                                <span class="input-group-addon"><i class="fa fa-user"></i></span>
+                                {{u_form.username}}
+                                <span class="input-group-addon"><i class="fa fa-envelope"></i></span>
+                                {{u_form.email}}                                   
+                            </div>
+                                </div>
+                         </div>
+                         
+                         <div class="form-group">
+                                {% if p_form.first_name.errors %}<div class="alert alert-danger" role="alert">{{u_form.first_name.errors }}</div> {%endif%}
+                                {% if p_form.last_name.errors %}<div class="alert alert-danger" role="alert">{{u_form.last_name.errors }}</div> {%endif%}
+                                <label class="pull-left control-label"></label>
+                                <div class="col-md-10  inputGroupContainer">
+                                <div class="input-group">
+                                <span class="input-group-addon">First Name</span>
+                                    {{p_form.first_name}}
+                                <span class="input-group-addon">Last Name</span>
+                                     {{p_form.last_name }}                              
+                            </div>                                    
+                                </div>
+                         </div>
+                         
+                         <div class="form-group">
+                                {% if p_form.Gender.errors %}<div class="alert alert-danger" role="alert">{{u_form.Gender.errors }}</div> {%endif%}
+                                {% if p_form.Birthday.errors %}<div class="alert alert-danger" role="alert">{{u_form.Birthday.errors }}</div> {%endif%}
+                                <label class="pull-left control-label"></label>
+                                <div class="col-md-10 inputGroupContainer">
+                                <div class="input-group">
+                                <span class="input-group-addon"><i class=" fa fa-intersex"></i></span>
+                                <select name="Gender" class="select form-control" id="id_Gender">
+                                    {%if obj.Gender %}
+                                        <option value="{{ obj.Gender}}" selected="">{{ obj.Gender}}</option>
+                                    {% endif %}
+                                        <option value="Gender">Gender</option>
+                                        <option value="Male">Male</option>
+                                        <option value="Female">Female</option>
+                                </select>
+                                <span class="input-group-addon"><i class="fa fa-calendar-o"> DOB </i></span>
+                               {%if obj.Birthday %} 
+                                <input  name="Birthday_month"  value="{{ obj.Birthday|date:'Y-m-d'}}" placeholder="Date of Birth"  class="form-control"  type="Date"  required />
+                                {% else %} 
+                                <input  name="Birthday_month"   placeholder="Date of Birth"  class="form-control"  type="Date"  required />
+                                {% endif %}                     
+                                    </div>
+                                </div>
+                         </div>
+                         <div class="container">
+                                <div class="row">
+                                        <div class="col-md-6">
+                                            <div class="form-group">
+                                                    <label class="pull-left control-label"></label>
+                                                    <div class="inputGroupContainer">
+                                                    <div class="input-group">
+                                               <p> <span class="input-group-addon"><i class="fa fa-info-circle"> Your Bio </i></span>
+                                               <small> <i class="alert-danger" role="alert" id="warn"> </i></small>
+                                                {% if obj.bio %}
+                                                <textarea name="bio" cols="40" rows="3" class="textarea form-control" required id="id_bio">
+                                                        {{obj.bio}}
+                                                </textarea>  </p>                 
+                                                    {% else %}
+                                                    <textarea name="bio" cols="40" rows="3" onkeyup="if (this.value.length > 300 ) { alert('bio word limit is 300'); return false; }" class="textarea form-control" required id="id_bio">
+                                                    </textarea>                                
+                                                    {% endif %}
+                                            
+                                                    </div>
+                                                    <small id="hint_id_bio" class="form-text text-muted">Tell us Something about You.(words limit 300)</small>
+                                            </div>
+                                            </div>
+                                        </div>
+                    <div class="col-md-6">
+                         <div class="form-group">                                
+                                <div class="col-md-offset-1 inputGroupContainer">
+                                 <label class="pull-left control-label">Profile Photo</label>
+                                <div class="input-group">
+                                <span class="input-group-addon"><i class="fa fa-image"></i></span>
+                                <span>
+                          {% if obj.profile_photo %}
+                                Currently: <a href="{{ obj.profile_photo.url }}">{{ obj.profile_photo }}</a>
+                                <input type="checkbox" name="profile_photo-clear" id="profile_photo-clear_id">  
+                                <label for="profile_photo-clear_id">Clear</label><br>  
+                                <input type="file" name="profile_photo" accept="image/*" class="clearablefileinput" id="id_profile_photo">                                                                    
+                                {% else %} 
+                                <input type="file" name="profile_photo" accept="image/*" class="clearablefileinput" id="id_profile_photo">                               
+                                {% endif %} 
+                            </span>                                 
+                                    </div>
+                                </div>
+                         </div>
+                        </div>
+                    </div>
+               </div>                      
+                         <div class="form-group">                                
+                                <div class="col-md-12 inputGroupContainer">
+                                <label class="pull-left control-label">Social Connects</label>
+                                <div class="input-group">
+                          
+                                <span class="input-group-addon"><i class="fa fa-whatsapp"></i></span>
+                                {% if obj.phone_number %}   
+                                <input type="text" name="phone_number" value="{{obj.phone_number}}" placeholder="Phone Number" maxlength="100" class="textinput textInput form-control" id="id_phone_number">
+                                {% else %} 
+                                <input type="text" name="phone_number" placeholder="Phone Number" maxlength="100" class="textinput textInput form-control" id="id_phone_number">
+                                {% endif %} 
+                                
+                                <span class="input-group-addon"><i class="fa fa-facebook"></i></span>
+                                {% if  obj.facebook %}   
+                                <input type="url" name="facebook" value="{{ obj.facebook}}" placeholder="https://www.facebook.com/your-facebook-id" class="urlinput form-control" id="id_facebook">
+                                {% else %} 
+                                <input type="url" name="facebook" placeholder="https://www.facebook.com/your-facebook-id" class="urlinput form-control" id="id_facebook">
+                                {% endif %} 
+                                
+                                <span class="input-group-addon"><i class="fa fa-twitter"></i></span>
+                                {% if  obj.twitter %}   
+                                <input type="url" name="twitter" value="{{obj.twitter}}" placeholder="https://www.twitter.com/your-twitter-id" class="urlinput form-control" id="id_twitter"> 
+                                {% else %} 
+                                <input type="url" name="twitter" placeholder="https://www.twitter.com/your-twitter-id" class="urlinput form-control" id="id_twitter"> 
+                                {% endif %} 
+                                
+                                <span class="input-group-addon"><i class="fa fa-instagram"></i></span>
+                                {% if obj.instagram %}   
+                                <input type="url" name="instagram" value="{{obj.instagram}}" placeholder="https://www.instagram.com/your-instagram-id" class="urlinput form-control" id="id_instagram">
+                                {% else %} 
+                                <input type="url" name="instagram" placeholder="https://www.instagram.com/your-instagram-id" class="urlinput form-control" id="id_instagram">
+                                {% endif %}
+                               
+                                <span class="input-group-addon"><i class="fa fa-linkedin"></i></span>
+                                {% if obj.linkedin %}   
+                                <input type="url" name="linkedin" value="{{obj.linkedin}}" placeholder="https://www.linkedin.com/your-linkedin-id" class="urlinput form-control" id="id_linkedin">
+                                {% else %} 
+                                <input type="url" name="linkedin"  placeholder="https://www.linkedin.com/your-linkedin-id" class="urlinput form-control" id="id_linkedin">
+                                {% endif %}
+                            
+                                    </div>
+                                </div>
+                         </div>
+
+              
+                      
+                </fieldset>
+                <center><button name="profile" class="btn btn-primary btn-sm" type="submit">Submit</button> </center>
+            </form><br>            
+    </div>
+</div>
+
+{% endblock content %}

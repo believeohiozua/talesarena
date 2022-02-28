@@ -1,0 +1,67 @@
+{% load social_share %}
+<table style=""> 
+{% if request.user.is_authenticated %}
+<td style="position: relative; top:-5px;">
+<form action="{% url 'like_post' %}" method="post">
+   {% csrf_token %}
+   {% if is_liked %}
+   <button type="submit" id="like" name='post_id' value="{{post.id}}" class="h4 btn btn-danger btn-xs fa fa-thumbs-down">&nbsp;</button>&ensp;
+   {% else %}
+   <button type="submit" id="like" name='post_id' value="{{post.id}}" class="h4 btn btn-primary btn-xs fa fa-thumbs-up">&nbsp;</button>&ensp;
+   {% endif %}
+ </form>
+{% endif %}
+</td>
+<td>
+{% if not post.author.user == request.user %}
+<div class="h4" style="">
+    &ensp;<b class=""><span class="label label-default">{{post.total_likes}} like{{post.total_likes|pluralize}}</span></b>  
+</div>
+{% else %}
+</td> 
+<td>
+<div style="">
+    <select class="label label-default">
+      <option>{{post.total_likes}} like{{post.total_likes|pluralize}}</option>     
+      {% for cat in post.likes.all %}
+      {% if request.user == cat %}   <option>You</option>{% endif %}
+      {% if request.user != cat %} <option>{{ cat }}</option>{% endif %}
+    {% endfor %}
+  </select>
+    </span></b>
+{% endif %}
+</div>
+</td>
+
+
+   
+       <!-- <td class="h4">  &ensp;<i class="label label-success">&ensp;<i class="fa fa-share"></i></i></td> -->
+        <td>&nbsp; &nbsp;</td>
+          <td class="h4">{% post_to_facebook post.get_absolute_url '<i class="btn btn-primary btn-xs fa fa-facebook"></i>'%}</td>
+          <td>&nbsp; &nbsp;</td>
+        <td class="h4">{% post_to_twitter 'New post: {{post.title}} By {{ post.author }} @' post.get_absolute_url '<i class="btn btn-info btn-xs fa fa-twitter"></i>'%}</td>
+        <td>&nbsp; &nbsp;</td>
+         <td class="h4"> {% post_to_linkedin post.content|truncatechars:200 post.get_absolute_url '<i class="btn btn-primary btn-xs fa fa-linkedin"></i>' %}</td>
+         <td>&nbsp; &nbsp;</td>
+         <td class="h4"> <a href="whatsapp://send?text={{post.overview|truncatechars:200}}see-more@>http://www.talesarena.com{{post.get_absolute_url}}"  target="_blank">
+         <i class="btn btn-success btn-xs fa fa-whatsapp"></i></a>
+         </td>
+          <td>&nbsp; &nbsp;</td>
+         <td>
+           <button class="open-button btn btn-info btn-xs" onclick="openForm()">Summarize</button>
+
+         </td>
+         
+
+        <script>
+        function openForm() {
+          document.getElementById("myForm").style.display = "block";
+        }
+
+        function closeForm() {
+          document.getElementById("myForm").style.display = "none";
+        }
+        </script>
+</table>
+
+

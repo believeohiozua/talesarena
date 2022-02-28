@@ -1,0 +1,17 @@
+<div>
+  <button id="button1" onClick="alert('click button1');">Button 1</button>
+  <button id="button2" onClick="alert('click button2');">Button 2</button>
+  <button id="button3" onClick="alert('click button3');">Button 3</button>
+</div>
+<script>
+  var clickcallback = function(i) {
+    setTimeout(function() {
+      let id = "button" + i;
+      document.getElementById(id).click();
+    }, 1000);   // one second
+    if(i <= 3) {
+        clickcallback(i+1);
+    }
+  };
+  clickcallback(1);
+</script>

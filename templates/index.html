@@ -1,0 +1,511 @@
+{% extends 'base/generic_base.html' %} 
+{% load static %}
+{% load social_share %}
+{% block content %}
+{% block pagetitle %}{% endblock %}
+<style>
+.tagg h3{color:rgb(255, 226, 60); width:auto; height: 10vw;}
+.discover{
+      position: relative;
+      left:20px;
+}
+   @media screen and (max-width:700px){
+     .discover{
+      position: relative;
+      right: -0px;      
+     }
+   }
+.index-top-text i{
+  color: #dae7e8;
+    text-shadow: 2px 0 0px #030d13, 3px 2px 0px rgba(77,0,38,0.5), 3px 0 3px #517a88, 5px 0 3px #96c5c2, 6px 2px 3px rgba(77,0,13,0.5), 6px 0 9px #95c4c8, 8px 0 9px #802A00, 9px 2px 9px rgba(77,25,0,0.5), 9px 0 18px #9dcdd1, 11px 0 18px #152c35, 12px 2px 18px rgba(77,66,0,0.5), 12px 0 30px #00d0ff, 14px 0 30px #6A8000, 15px 2px 30px rgb(147, 197, 205), 15px 0 45px #80FF00, 17px 0 45px #354e46, 17px 2px 45px rgba(38,77,0,0.5);
+}
+</style> 
+
+<!-- Hero Section-->
+
+<section class="col-lg-12" style="background: url({% static 'images/home.png' %});  background-size: cover; background-position: center center">
+  <div class="container" style="color: #ea02f7; ">
+    <div class="row">
+      <div class="text-center tagg">
+        <!-- <p  class="well h1"> Do You Believe your History Could change the word</p > -->
+          <br />  <br />  <br />  <br />  <br />  <br />  <br />  <br />  <br />  <br />  <br />  <br />
+        <h3><a href="#" class="hero-link"> </a></h3>
+        <div class="container">
+            <div class="row">
+        <table class="col-md-12 index-top-text">
+          <tr>
+        <div>
+        <td class="text-left h3">
+         <!-- <i style="background-color: #a5d5dad6;">@TalesArena<br> We Inspire solutions to <br> Life Challenges </i> -->
+        </td>
+        </div>        
+        <!-- <td class="index-top-text" style="border-left: 3px solid #ea02f7; height: 10px;"> </td> -->
+
+        <div style="">
+        <td class="text-right h3">
+            <!-- <i style="background-color: #a5d5dad6;">And <br> Transform the World <br> with Our Tales</i> -->
+          </td>
+        </div>
+          </tr>
+        </table>  
+      </div>
+      </div>
+        <a href="#services" class="continue link-scroll">
+          <center class="h4 pull-left discover" style="color:#ea02f7; text-shadow: 1px 1px #152c35;">Discover More <i class="fa fa-long-arrow-down"></i> </center></a>          
+      </div>
+    </div>
+  </div>
+</section>
+<!--Slider Start-->
+   
+      
+<!--Slider Start-->
+<header> <i class="fa fa-"></i> </header>
+<!--Slider Start-->        
+<!-- Intro Section-->
+    <section class="intro well">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-7">            
+            <p class="text-justify h5 panel panel-body">               
+              <strong>WHAT IS YOUR STORY?</strong>              
+              <p class="">
+               Write, Share and Inspire the world with the Epistles of your life experiences
+               while you get enriched with vatalities of life Lessons drawn from 
+               revolutionary <strong>Tales, Articles and "Spoken Words"</strong> of Great Men and Women
+                From All Around The World</p>
+                 <p class="h5"> <strong></strong></p>
+                 <form action="{% url 'search' %}" class="search-form">             
+                    <div class="input-group">
+                        <input type="text" name="q" class="form-control" placeholder="Search Tales">
+                        <span class="input-group-btn">
+                            <button class="btn btn-default" type="submit">
+                                <i class="fa fa-search"></i>
+                        </button>
+                        </span>
+                    </div>
+                    </form>
+                  </p>       
+          </div>
+         
+          <div class="col-md-4 col-md-offset-1 panel panel-body well"> 
+            <div class="" style="position:relative; top: 10px;">            
+             <div class="media-body">
+                {% if request.user.is_authenticated and  request.user.profile.user %}                
+              <a href="/profile/{{ request.user.profile.pk }}">
+               {% if request.user.profile.profile_photo %}
+               <img src="{{ request.user.profile.profile_photo.url }}"
+               style=" width:100px;height:100px; margin-top:20px; margin-right: 20px;" class="pull-left img-circle"/>
+               {%  else %}
+               <img src="{% static 'images/i.jpg'%}"
+               style=" width:100px;height:100px; margin-top:20px; margin-right: 20px;" class="pull-left img-circle"/>
+               {% endif %}               
+              </a> 
+              <p class="h5">Welcome: <a href="/profile/{{ request.user.profile.pk }}"> @{{ request.user.profile.user}}| {{ request.user.bio}}</a></p>                 
+              <p><span><a class="btn btn-info btn-xs" style="color: white" href="/profile/{{ request.user.profile.pk }}">Dashbord</a></span></p>             
+              <p><span><a class="btn btn-warning btn-xs" style="color: white" href="{% url 'post-create' %}">Create Post</a></span></p>
+                    
+            {% else %} 
+            <div class="index-top-text">
+            <p class="h5"><b>Let your Story; Inspire the World!</b></p>
+            <p class="h5"><b>Join Our Community Today</b></p> 
+            <p class="h5"><b><a href="{% url 'account_signup' %}">Sign up</a> Now!</b></p>
+            </div>
+            {% endif %} 
+          </div>  
+            
+         </div>
+        </div> 
+        </div>
+      </div>
+    </section>
+    <header> <i class="header"></i> </header>
+  
+
+    
+
+
+ 
+
+<section class="intro well">
+<div class="container">
+  <div class="row">      
+        {% for post in object_list %} 
+          <section class="">          
+                {% if not forloop.counter|divisibleby:2 %}                  
+                      <div class="col-md-4">
+                          <figure class="thumbnail">
+                              {% if post.thumbnail %}
+                                <img src='{{ post.thumbnail.url }}' class="img-rounded img-responsive" id="index-tl-img" /> 
+                                {% else %}
+                                <img src="{% static 'images/badge.png' %}" class="img-rounded img-responsive" id="index-tl-img" />
+                                {% endif %}                                                  
+                              </figure> 
+                      </div>
+                      <div class="col-sm-8 text-justify panel panel-body">                         
+                              <div class="text-inner d-flex align-items-center">
+                                <div class="content">
+                                <center class ="h5"><a class="label-danger" style="color: white;" href="{{ post.get_absolute_url }}">{{ post.title }}</a></center>
+                                  <header> <i class="fa fa-"></i>
+                                    {% for cat in post.categories.all|slice:":5" %}
+                                     <span class="h6"><strong class="text-danger  text-center">#{{ cat }}</strong></span>
+                                    {% endfor %} 
+                                  </header>
+                                      <p class="text-align">{{ post.overview|safe|capfirst|truncatechars:700 }} <a href="{{post.get_absolute_url}}">See More</a> </p>
+                                  <footer class="post-footer d-flex align-items-center"><a href="#" class="author d-flex align-items-center flex-wrap">
+                                    {% if post.author.profile_photo %}
+                                      <span class=""><img style="width: 30px" src="{{post.author.profile_photo.url}}" alt="..." class="img-circle"></span>&nbsp; &nbsp;
+                                    {% else %}
+                                    <span class=""><img style="width: 30px" src="{% static 'images/i.jpg'%}" alt="..." class="img-circle"></span>&nbsp; &nbsp;
+                                    {% endif %}
+                                      <span class="title"><span> <a href="profile/{{ post.author.user.profile.pk }}">{{ post.author }}</a></span></span></a>&nbsp; &nbsp;
+                                    <span class="date"><i class="icon-clock"></i> {{ post.timestamp|timesince }} ago</span>                                  
+                                  </footer>
+                                </div>
+                              </div>                           
+                        </div> 
+                <hr/>
+                {% endif %}
+                <!-- Post-->          
+                {% if forloop.counter|divisibleby:2 %} 
+                <div class="container middle">                
+                    <div class="row">
+                      <div class="col-sm-4 order-sm-12">
+                          <figure class="thumbnail">
+                              {% if post.thumbnail %}
+                                <img src="{{ post.thumbnail.url }}" class="img-rounded img-responsive" id="index-tl-img" /> 
+                                {% else %}
+                                <img src="{% static 'images/badge.png' %}" class="img-rounded img-responsive" id="index-tl-img" />
+                                {% endif %}                                                  
+                              </figure>  
+                      </div> 
+                      <div class="col-sm-8 text-justify order-sm-1 panel panel-body">                         
+                              <div class="text-inner d-flex align-items-center">
+                                <div class="content">
+                                    <center class ="h5"><a class="label-danger" style="color: white;" href="{{ post.get_absolute_url }}">{{ post.title }}</a></center>
+                                    <header> <i class="fa fa-"></i>
+                                   
+                                    {% for cat in post.categories.all|slice:":5" %}
+                                      <span class="h6"><strong class="text-danger  text-center">#{{ cat }}</strong></span>
+                                    {% endfor %}
+                                   
+                                  </header>
+                                  <p class="text-justify"> {{ post.overview|safe|capfirst|truncatechars:700 }} <a href="{{post.get_absolute_url}}">See More</a> </p>
+                                  <footer class="post-footer d-flex align-items-center"><a href="#" class="author d-flex align-items-center flex-wrap">
+                                    {% if post.author.profile_photo %}
+                                      <span class=""><img style="width: 30px" src="{{post.author.profile_photo.url}}" alt="..." class="img-circle"></span>&nbsp; &nbsp;
+                                    {% else %}
+                                    <span class=""><img style="width: 30px" src="{% static 'images/i.jpg'%}" alt="..." class="img-circle"></span>&nbsp; &nbsp;
+                                    {% endif %}
+                                      <span class="title"><span> <a href="profile/{{ post.author.user.profile.pk }}">{{ post.author }}</a></span></span></a>&nbsp; &nbsp;
+                                    <span class="date"><i class="icon-clock"></i> {{ post.timestamp|timesince }} ago</span>                                  
+                                  </footer>
+                                </div>
+                              </div>                           
+                        </div>
+                      </div>     
+                    </div>             
+                    {% endif %}           
+            </section>
+            <hr>
+            {% endfor %}                                                      
+ 
+   </div>
+</div>
+</section>
+<section>
+ 
+  <div class="container"> <header class="text-center h2"> <b>Popular Tales</b></header>
+    <div class="row">
+        {% for p in most_popular|slice:":4" %}
+    {% if p.publish %} 
+      <center class="col-md-3">
+          {% if p.thumbnail %}         
+          <img class="img-responsive img-rounded" style="height:150px; width:200px;" src="{{ p.thumbnail.url }}"/> 
+          <figcaption><a href="{{p.get_absolute_url}}">{{p.title}}</a></figcaption>
+            {% else %}                    
+          <img class="img-responsive img-rounded" style="height:150px; width:200px;" src="{% static 'images/badge.png'%}"/> 
+          <figcaption><a href="{{p.get_absolute_url}}">{{p.title}}</a></figcaption>
+            {% endif %}                 
+            <i class="fa fa-comment"></i>&nbsp; ({{ p.comment_count }})&nbsp; &nbsp;
+            <i class="fa fa-eye"></i>&nbsp; ({{ p.view_count }})&nbsp; &nbsp;
+            <i class="fa fa-thumbs-up"></i>&nbsp; ({{p.total_likes}})
+      </center>      
+    {% endif %}
+    {% endfor %}
+    </div>
+  </div>
+</section>
+
+<!-- Subscribe to get latest updates Search Well -->
+<section class="intro top3">
+    <div class="container">
+      <div class="row">
+          <div class="col-md-4">
+              <div class="well" style="padding: 5px !important;">
+                   <p class="text-center h3">Tales Lord</p>
+                   <center>                  
+                             {% for post in most_popular|slice:":1" %}
+                             {% if post.publish %} 
+                             {% if post.author.profile_photo %}
+                             <span class=""><img src="{{post.author.profile_photo.url}}" alt="..." class="img-rounded lead-author-img"></span>&nbsp; &nbsp;
+                                    {% else %}
+                                    <span class=""><img src="{% static 'images/i.jpg'%}" alt="..." class="img-rounded lead-author-img"></span>&nbsp; &nbsp;
+                                    {% endif %} <br>
+                             <span class="h4 text-center">
+                                 <a class="h6" href="/profile/{{ post.author.user.profile.pk }}/">{{post.author| upper}}</a>  <br />  
+                                Post: <a class="h6" href="{{post.get_absolute_url}}">{{post.title}}</a> <br />                            
+                            </span>
+                            {% endif %}
+                             {% endfor %}                             
+                              <span class="text-center">                                                              
+                             <center><p class="h6"><a style="color:#8f0db9" href='/about/#taleslord/'>Become a Tales Lord Today!</a></p></center>                             
+                               </span>                         
+                    </center>   
+                        
+              </div>  
+          </div>   
+ <!--cat -->      
+          <div class="col-md-4">
+              <div class="well" style="padding:  !important;">
+                  <h4 class="text-center h3">Categories</h4>
+                  <div class="row">
+                      {% if category_count %}                       
+                      {% for count in category_count|slice:":20" %} 
+                      <span  class="btn  btn-sm"> 
+                        <form action="{% url 'catsearch' %}">
+                            <input type="hidden" name="cat" value="{{ count.categories__category }}" readonly> 
+                            <input type="submit" value=" #{{ count.categories__category }} " style="color: #eee; background:#152c35; border-radius: 30%;" class="btn btn-default btn-xs">                            
+                        </form>
+                      </span>             
+                      {% endfor %}
+                      {% else %} 
+                          {{Null}}
+                     {% endif %}  
+                      </div>
+                    </div>
+                 </div>
+        <!-- Subscribe to get latest updates Search Well -->
+        <div class="col-md-4">     
+            <div class="well">
+              <center class="h3">Subscribe</center>
+              <p>Help us to give you <em>First Hand Information</em> About 
+              Trends, Events, Opportunities and Deveopments in the TalesArena community.</p>
+              <p><strong>Subscribe with your correct and current email address and leave the rest to us.</strong> </p>
+              <form action="." method="POST">
+                  {% csrf_token %}
+                <div class="form-group">
+                  <input type="email" name="email" id="email" placeholder="Type your email address">
+                  <button type="submit" class="submit">Subscribe</button>
+                </div>
+              </form>
+          </div>
+        </div>        
+    </div>
+  </section>
+  <!-- Subscribe to get latest updates Search Well -->
+
+ <!------------------------------------------------------------------------------------------------------------------------------------------------>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">     
+        <div class="panel">    
+            <div class="panel-body">
+              <center class="h2">
+                <header>
+                <b class="text-danger" id="services"> Our Products</b>
+                </header>
+               </center>
+                   
+                                                
+                                            
+<section class="">                      
+    <div class="">   
+<section class="intro">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12">
+                <ul id="countrytabs" class="shadetabs">
+                    <div class="col-sm-2">
+                    <li><a href="#" rel="1" class="selected">Page Summarizer (AI)</a></li>
+                    </div>
+                    <div class="col-sm-2">
+                        <li><a href="#" rel="2">Data Analysis (ML)</a></li>
+                    </div>
+                    <div class="col-sm-2">
+                        <li><a href="#" rel="3">Research / Project work</a></li>
+                    </div>
+                    <div class="col-sm-2">
+                        <li><a href="#" rel="4">Quality Web Development</a></li>
+                    </div>
+                    <div class="col-sm-2">
+                        <li><a href="#" rel="5">Content Management</a></li>
+                    </div>
+                </ul>	
+            </div>
+           
+            
+        </div>
+    </div>
+</section>
+<style type="text/css">
+.tabcontent_section {width:100%;  height:100%;}
+  .tabi {width: 100%;}
+  .tabimg{width:20vw; height:20vw;}
+    @media screen and (max-width:700px)
+    { .tabcontent_section{width: 100%;  height:100%;}
+      .tabi{width: 100%;}
+      .tabimg{width:20vw; height: 20vw;}
+    }
+  </style>
+                
+                <div class="tabcontent_section well tabo">
+                  <div class="container">
+                      <div class="row">
+                        <div class="col-md-12">                         
+                              <div id="1" class="tabcontent">                        
+                                      <section class="intro">
+                                      <div class="container">
+                                          <div class="row">
+                                              <div class="col-sm-4">
+                                               <img class="tabimg" src="{% static 'images/services/pagesum.jpg'%}" alt="image" />
+                                              </div>                                                                          
+                                              <div class="col-sm-6">
+                                              <h4>Page Summarizer (AI)</h4>                                    
+                                              <p class="text-justify tabi">                                      
+                                                  Summarize your articles, splitting the most important sentences and ranking a sentence based on importance.
+                                                  our AI summarizer automatically analyzes texts in various languages and tries to identify the most important parts of the text.
+                                                  Just paste your text or load it from an URL to get it summarized. 
+                                                  <br> <br>                                                
+                                                  <i><a href="/summarizer/" class="btn btn-primary btn-xs"><i class="fa fa-eye"></i> Check Out Our Page Summarizer</a></i>
+                                               </p>
+                                              </div>
+                                          </div>
+                                      </div>
+                                    
+                                      </section>                        
+                                 </div>
+                                 
+                              <!------ 2 -- -- -->
+                              <div id="2" class="tabcontent">
+                               <section class="intro">
+                                  <div class="container">
+                                      <div class="row">
+                                          <div class="col-sm-4">
+                                           <img class="tabimg" src="{% static 'images/services/data.jpg'%}" alt="image" />
+                                          </div>                                           
+                                          <div class="col-sm-6">
+                                            <h4>Date Analysis</h4>                                    
+                                             <p class="text-justify tabi">                                         
+                                                We’re proud to stand at the forefront of the Big Data revolution.
+                                                Using the latest analytic tools and processes, we’re able to maximize our offerings and deliver unparalleled service and support.
+                                                We are highly skilled in all aspects of data analytics, including mining, generation, and visualization,
+                                                transforming data into readable, goal-driven reports for continued innovation and growth.
+                                                We define and implement data acquisition and integration logic, selecting appropriate combination of methods
+                                                 and tools within defined technology stack to ensure optimal scalability and performance of the solution 
+                                                 we evelop and maintain databases by acquiring data from primary and secondary sources,
+                                                 and build scripts that will make our data evaluation process more flexible and scalable across various data sets
+                                                <br> <br>                                            
+                                                <i><a href="/services/" class="btn btn-primary btn-xs">Contact Us For Your Date Analysis</a></i>
+                                             </p>
+                                            </div>
+                                      </div>
+                                  </div>
+                                  </section>                   
+                              </div> 
+                              
+                              <!------ 2 -- -- -->
+                              <div id="3" class="tabcontent">
+                                <section class="intro">
+                                      <div class="container">
+                                          <div class="row">
+                                              <div class="col-sm-4">
+                                               <img class="tabimg" src="{% static 'images/services/research.png'%}" alt="image" />
+                                              </div>
+                                              <div class="col-sm-6">
+                                                <h4>Research / Project work</h4>                                    
+                                                 <p class="text-justify tabi">                                         
+                                                    Our Research officers supervise research and projects and work with team members to ensure that the project remains on schedule.
+                                                    we review and analyze data during the course of the project.
+                                                    we derive joy from performing both Qualitative and  Quantitative data research and analysis
+                                                    we carry out experiments and investigations in a range of areas, including geoscience, 
+                                                    medical research, meteorology and pharmacology, chemistry, Enginnering, Physics etc
+                                                    <br> <br>                                                
+                                                    <i><a href="/services/" class="btn btn-primary btn-xs">Contact Us For Your Research / Project work</a></i>
+                                                 </p>
+                                                </div>
+                                          </div>
+                                      </div>
+                                      </section>                           
+                              </div> 
+                              
+                              <!------ 2 -- -- -->
+                              <div id="4" class="tabcontent">
+                                <section class="intro">
+                                      <div class="container">
+                                          <div class="row">
+                                              <div class="col-sm-4">
+                                               <img class="tabimg" src="{% static 'images/services/web.png'%}" alt="image" />
+                                              </div>
+                                              <div class="col-sm-6">
+                                                <h4>Quality Web Development</h4>                                    
+                                                <p class="text-justify tabi">                                          
+                                                   We have the best web developers from around the world that
+                                                   are dedicated to delivering quality web services at very affordable rates
+                                                    <br> <br>                                                
+                                                    <i><a href="/services/" class="btn btn-primary btn-xs">Contact Us For Your  Web Development</a></i>
+                                                 </p>
+                                                </div>
+                                          </div>
+                                      </div>
+                                      </section>                    
+                              </div>
+                              
+                              <!------ 2 -- -- -->
+                              <div id="5" class="tabcontent">
+                                <section class="intro">
+                                      <div class="container">
+                                          <div class="row">
+                                              <div class="col-sm-4">
+                                               <img class="tabimg" src="{% static 'images/services/content.jpg'%}" alt="image" />
+                                              </div>
+                                              <div class="col-sm-6">
+                                                <h4>Content Management</h4>                                    
+                                                 <p class="text-justify tabi">                                          
+                                                   We promote website and businesses through newsletters and various other outreach methods that the CMS is responsible for developing.
+                                                    we collaborates with the clients throughout the different departments of the company to ascertain the most reliable and relevant information.
+                                                    we leverage several standard CMS software packages including QuarkXpress, InDesign, Dreamweaver, Microsoft Word, Excel, and PowerPoint as well as
+                                                     various website, publishing, and design software, such as Kintera, Convio, HTML, and Javascript etc. 
+                                                    <br> <br>                                               
+                                                    <i><a href="/services/" class="btn btn-primary btn-xs">Contact Us For Your CMS</a></i>
+                                                 </p>
+                                                </div>
+                                          </div>
+                                      </div>
+                                      </section>                   
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                  </div> 
+                      </div>  
+                  </section>
+           </div>                   
+          <!-------------------------- script -- -- -- -- -- -- -- -->
+                <script type="text/javascript">            
+                      var countries=new ddtabcontent("countrytabs")
+                      countries.setpersist(true)
+                      countries.setselectedClassTarget("link") //"link" or "linkparent"
+                      countries.init()            
+                </script>
+           <!-------------------------- end -- -- -- -- -- -- -- -->
+          </div></div></div></div></div>
+<!--Sidebar Start--> 
+    
+<!--Sidebar End-->
+
+
+    </div>
+</div>
+   
+{% endblock %}

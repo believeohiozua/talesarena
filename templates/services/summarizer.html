@@ -1,0 +1,220 @@
+{% extends 'base/generic_base.html' %} 
+{% load crispy_forms_tags %}
+{% load static %}
+{% block content %}
+<style>
+    .url-sum-form textarea, input, select{
+     border: solid 2px #cccccce8;
+     border-radius: 5px;
+     line-height: 30px;
+     height: 30px;
+    }
+    .url-sum-form textarea, select, input:hover{
+      border: solid 2px  #ff072926;
+    }
+    .url-sum-form textarea{
+    
+      height: 200px;
+      width: 100%;
+    }
+</style>
+
+
+<center class="h2"><b class="text-danger"> Page Summarizer </b> </center>
+<header> <i class="fa fa-"></i> </header>
+ 
+
+ <section class="container">
+<div class="tab_section"> 
+    <!-- start -->
+    <ul id="countrytabs" class="shadetabs">
+      <li><a href="#" rel="1" class="selected">Web Page Summarizer</a></li>
+      <li><a href="#" rel="2">Text Summarizer</a></li>
+    </ul>	
+</div>
+			
+<div class="tabcontent_section" style="border: 0px;">
+      <div id="1" class="tabcontent">
+          <div class="container well">
+              <div class="row">
+                  {% if results %} 
+                  <div class="col-lg-6">  
+                    {%else%}
+                <div class="col-lg-10">  
+                    {%endif%}
+                            <h2 class="h3">WEB PAGE SUMMARIZER</h2>
+                            Type or Paste The Url (web-link) You Wish to summarize <br />
+                            in The Url Input Field Below <br />
+                            <p><strong>Note:</strong>
+                              some web sites do not allow scapping and at such,<br />
+                              our web summarizer will not generate any result from <br />
+                              such url, however if you wish to summarize such web page, <br /> you can 
+                              <a href="/contact/">Contact the Admin</a></p>
+                        <hr />
+                          <form class="bottom3 url-sum-form" method='POST' action='.' id="webpage_sum">{% csrf_token %}
+                                <div class=""> 
+                                  Summarize this web page<br />
+                                  <input type="url" name="SUMMARIZE" placeholder=" https://www.example.com/????" class="url" required style="width: 100%;" />
+                                </div> <br />
+                                <div class="">
+                                  In
+                                  <select name="LANGUAGE" class="lang" style="width: 25%"> 
+                                      <option value="english">English</option>
+                                      <option value="chinese_(Simplified)">Chinese (Simplified)</option>
+                                      <option value="czech">Czech</option> 
+                                      <option value="french">French</option>
+                                      <option value="german">German</option> 
+                                      <option value="japanese">Japanese</option>
+                                      <option value="portuguese">Portuguese</option> 
+                                      <option value="slovak">Slovak</option>
+                                      <option value="spanish">Spanish</option>
+                                  </select>
+                                  Language,&ensp;To
+                                      <input type="number" name="SENTENCES_COUNT" class="count" value="1" min="1" required style="width: 25%" /> 
+                                  Sentences
+                                      <br /><br /> 
+                                      <center>                                
+                                    <input type="submit" class="btn btn-primary btn-xs" value="Summarize" />  
+                                    </center>                         
+                              </div>          
+                          </form>
+                      <hr />
+                   
+        </div>
+<div class="col-lg-6">         
+                  <!------------------------web-page----------------------------------->                             
+           {% if keywords != 'Invalid Entry' %}
+                    {% if keywords %} 
+                    <div class="panel" style="padding: 15px;">                                 
+                    <h4 class="text-justify"> <u>KEYWORDS</u>   </h4>       
+                        <center class="text-justify">
+                           {{keywords}}
+                          </center>
+                          <br>             
+                    {% endif %}
+                    </div>                       
+                  <!---------------------------summary--------------------------------->                  
+                    {% if results %}        
+                    <div  class="panel" style="padding: 15px;">            
+                        <h4 class="text-justify">  <u>SUMMARY</u>   </h4>              
+                            {% for sentence in results %}                                   
+                              <p>{{sentence}}</p>
+                            {% endfor %}                           
+                          <p class="text-center">-----END-----</p>              
+                    </div>
+                    {% endif %}
+                    {% else %}
+                        <details class="bottom4"> 
+                        <summary class="h2">Error!</summary>
+                        <p class="h3" > </p>
+                        <ul class="bottom4">
+                          <li>Check Your Internet Connection</li>
+                          <li>Check if your Url is valid</li>
+                          <li>Check if Scrapping is Prohibited on the Web Site</li>
+                          <li> <a href="/contact/">Contact the Admin</a></li>
+                        </ul>
+                      </details>    
+                    {% endif %}                          
+          </div>
+      </div> 
+  </div>
+</div>
+
+    <div id="2" class="tabcontent">
+        <div class="container well">
+            <div class="row">
+               
+                {% if text_results %}
+              <div class="col-lg-6">
+                {%else%}
+                <div class="col-lg-12">
+                    {%endif%}
+                        <h2 class="h3">TEXT SUMMARIZER</h2>
+                        <p class="">Simpy type or copy and paste any text you wish to summarize in the text field
+                            and click summarize</p><br>                        
+                                      
+                                        <!------------------------web-page----------------------------------->
+                  <form class="bottom3 url-sum-form" method='POST' action='.' id="webpage_sum">{% csrf_token %}
+                      <div class=""> 
+                        Summarize This  Texts<br />
+                        <textarea name="Text_field" cols="70" rows="10" class="textarea" required></textarea>
+                      </div> <br />
+                      <div class="">
+                        In
+                        <select name="Lang" class="lang" style="width: 25%"> 
+                            <option value="english">English</option>
+                            <option value="chinese_(Simplified)">Chinese (Simplified)</option>
+                            <option value="czech">Czech</option> 
+                            <option value="french">French</option>
+                            <option value="german">German</option> 
+                            <option value="japanese">Japanese</option>
+                            <option value="portuguese">Portuguese</option> 
+                            <option value="slovak">Slovak</option>
+                            <option value="spanish">Spanish</option>
+                        </select>
+                        Language,&ensp;To
+                              <input type="number" name="s_counts" class="count" value="1" min="1" required style="width: 25%" /> 
+                        Sentences
+                              <br /><br />  
+                              <center>                             
+                          <input type="submit" class="btn btn-primary btn-xs" value="Summarize" />    
+                          </center>      
+                    </div>          
+                </form>                                                       
+                                    <!------------------------web-page-----------------------------------> 
+      
+</div>
+<div class="col-lg-6">
+            <!------------------------text-keyword----------------------------------->                   
+                      <!-- <div class="">
+                          <div class="">
+            {% if text_results != "'_'" %}
+                      {% if text_kw %}   
+                        <div class="panel">                                 
+                        <h4 class="text-justify"> <u>KEYWORDS</u>   </h4>       
+                            <center class="text-justify">
+                                {{text_kw}}
+                              </center>
+                              <br>                                    
+                        {% endif %}
+                        </div>
+                      </div>
+                    </div> -->
+        <!------------------------text-results----------------------------------->  
+                      {% if text_results %}
+                      <div  class="panel" style="padding: 15px;">            
+                        <h4 class="text-justify">  <u>SUMMARY</u>   </h4>              
+                            {% for sentence in text_results %}                                   
+                              <p>{{sentence}}</p>
+                            {% endfor %}                           
+                          <p class="text-center">-----END-----</p>              
+                    </div>                   
+                          
+                        {% endif %}
+                        {% else %}
+                        <details class="bottom4"> 
+                        <summary class="h2">Error!</summary>
+                        <p class="h3" > </p>
+                        <ul class="bottom4">
+                          <li>Check Your Internet Connection</li>                          
+                          <li></li>
+                          <li> <a href="/contact/">Contact the Admin</a></li>
+                        </ul>
+                      </details>    
+                      {% endif %}      
+                </div>
+              </div>
+            </div>                                
+        </div> 
+      </div>
+    </section>
+<!-------------------------- script -- -- -- -- -- -- -- -->
+<script type="text/javascript">            
+  var countries=new ddtabcontent("countrytabs")
+  countries.setpersist(true)
+  countries.setselectedClassTarget("link") //"link" or "linkparent"
+  countries.init()            
+</script>
+<!-------------------------- end -- -- -- -- -- -- -- -->
+
+{% endblock%}

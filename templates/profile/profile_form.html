@@ -1,0 +1,31 @@
+{% extends 'base/generic_base.html' %} 
+{% load crispy_forms_tags %}
+{% load static %}
+{% block content %}
+
+ {% if request.user.is_authenticated %}
+<div class="container set-pad well" style="background-color: #a5d5dabf; border: 21x solid #152c35;">       
+    <div class="col-lg-12">
+      <center><h1>{{ mytitle }}</h1></center>                  
+            
+            {{ form.media }}
+            <form method="POST" action="." enctype="multipart/form-data">
+                {% csrf_token %}
+                {{ user_form|crispy }}
+                {{ form_class|crispy }}
+               
+                
+                
+                <center><button class="btn btn-primary btn-sm" type="submit">Submit</button></center>
+            </form><br>           
+    </div>
+</div>
+
+{% else %}
+<hr>   
+<center class="top10" style="position:relative; padding-bottom: 17vw; bottom: 0">
+    <p class="h3"> Login To Access This Page</p>    
+    <a href="{% url 'account_login' %}?next={{request.path}}" class="btn btn-primary">login</a>
+</center><hr>
+{% endif %}
+{% endblock content %}

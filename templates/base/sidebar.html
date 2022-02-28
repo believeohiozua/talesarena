@@ -1,0 +1,115 @@
+{% load static %}
+    <!-- Blog Search Well -->
+    <div class="well">
+        <p class="h3 text-center">Search Tales</p>
+        <form action="{% url 'search' %}" class="search-form">             
+        <div class="input-group">
+            <input type="text" name="q" class="form-control"  placeholder="Search Tales">
+            <span class="input-group-btn">
+                <button class="btn btn-default" type="submit">
+                    <i class="fa fa-search"></i>
+            </button>
+            </span>
+        </div>
+        </form>                      
+</div>   
+<style type="text/css"> 
+    
+    .mycatab{position: relative;  width:100%}
+     
+    </style>
+ <!---===================================- /.row -->
+<section class="well">
+  <p class="h3 text-center">Categories</p>
+                      
+       {% if category_count %}                       
+          {% for count in category_count|slice:":16" %} 
+     
+                   
+              <span  class="btn  btn-sm"> 
+                      <form action="{% url 'catsearch' %}">
+                          <input type="hidden" name="cat" value="{{ count.categories__category }}" readonly> 
+                          <input type="submit" value="#{{ count.categories__category }}" style="border-radius: 30%; color: #eee; background:#152c35" class="btn btn-default btn-xs">                            
+                      </form>
+           </span>                                                   
+          {% endfor %}
+      {% else %} 
+          {{Null}}
+     {% endif %}    
+                               
+        
+</section>              
+     
+  
+
+
+    
+   
+                    <!-- Side Widget Well -->
+                    <div class="well">
+                       <center class="text-center">
+                        <strong class="text-center h3">Tales Lord</strong>
+                      </center>
+                      <center>                  
+                        {% for post in most_popular|slice:":1" %}
+                        {% if post.publish %} 
+                        {% if post.author.profile_photo %}
+                        <span class=""><img src="{{post.author.profile_photo.url}}" alt="..." class="img-rounded lead-author-img"></span>&nbsp; &nbsp;
+                               {% else %}
+                               <span class=""><img src="{% static 'images/i.jpg'%}" alt="..." class="img-rounded lead-author-img"></span>&nbsp; &nbsp;
+                               {% endif %} <br>
+                        <span class="h4 text-center">
+                            <a class="h6" href="/profile/{{ post.author.user.profile.pk }}/">{{post.author| upper}}</a>  <br />  
+                           Post: <a class="h6" href="{{post.get_absolute_url}}">{{post.title}}</a> <br />                            
+                       </span>
+                       {% endif %}
+                        {% endfor %}                             
+                         <span class="text-center">                                                              
+                        <center><p><a style="color:#8f0db9" href='/about/#leadauthor/'>Become a Tales Lord Today!</a></p></center>                             
+                          </span>
+                    
+               </center>   
+                    </div>
+
+<!----##############################----SIDE BAR EXTEN-----##############################---->
+
+<div class="col-lg-14 well">
+        <h3 class="text-center">Popular Tales</h3>            
+        <ul class="list-unstyled">  
+        {% for post in most_popular|slice:":10" %}
+        {% if post.publish %}        
+        <table>  
+            <tr> 
+                 <td style="padding: 10px;"> 
+                  {% if post.thumbnail %}         
+                  <span style="position: relative;float: left;">
+                    <img style="width:75px;" src="{{post.thumbnail.url}}" alt="..." class="img-rounded">
+                  </span>&nbsp; &nbsp;
+                    {% else %}
+                    <span class="">
+                      <img style="width:75px;" src="{% static 'images/badge.png'%}" alt="..." class="img-rounded">
+                    </span>&nbsp; &nbsp;
+                    {% endif %}
+                    </td>
+                     
+                    <td> 
+                    <span class="text-right"><a class="" style="color:  #152c35;" href="{{ post.get_absolute_url }}">{{ post.title|title }}</a> </span>
+                         <center>                       
+                            <i class="fa fa-comment"></i>&nbsp; ({{ post.comment_count }})&nbsp; &nbsp;
+                            <i class="fa fa-eye"></i>&nbsp; ({{ post.view_count }})&nbsp; &nbsp;
+                             <i class="fa fa-thumbs-up"></i>&nbsp; ({{post.total_likes}})
+                         </center> 
+                    </td> 
+              </tr>
+          </table> 
+                 <hr>
+              {% endif %} 
+              {% endfor %}                 
+          </ul>          
+</div>
+
+        
+       
+
+
+

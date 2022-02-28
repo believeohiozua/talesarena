@@ -1,0 +1,24 @@
+{% extends 'base/generic_base.html' %} 
+{% load crispy_forms_tags %}
+{% load static %}
+{% block content %}
+
+  <center class="container top10 bottom10">
+      <div class="row top2 bottom2">       
+        <main class=""> 
+          <div class="container">
+            <p class="h3"><b>{{ object }}! </b>Are you sure you want to delete Your Account?</p>
+            <form method="post">
+                {% csrf_token %} 
+           
+         	<a href="/profile/{{ request.user.profile.pk }}" class="btn btn-info">No</a>
+         	            &emsp;&emsp;&emsp;&emsp;               
+              <input class="btn btn-danger" type="submit" value="Yes"> 
+          	
+            </form>
+           
+          </div>
+        </main>               
+      </div>
+    </center>
+{% endblock%}

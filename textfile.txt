@@ -1,0 +1,676 @@
+Over time, man has battled with the extreme consequences of environmental
+contamination of heavy metals particularly lead (Seregin et al., 2004). This
+poses a serious environmental concern as Heavy metals cannot be destroyed
+by degradation (Lanza, 2008). More to this environmental problem is the high
+cost of treatment by conventional methods. Phytoremediation overtime has
+provided a cost-effective alternative to high-energy and high-cost
+conventional methods. It is considered to be a “Green Revolution” in the field
+of innovative cleanup technologies (Epstein, 2009). Phytoremediation is a
+bioremediation techniques which involves the use of plants to remediate
+environmental media, this techniques is being pursued as a new approach for
+the cleanup of contaminated soils and waters, including groundwater.
+Phytoremediation uses plants to clean up contaminated soil and groundwater,
+taking advantage of plants’ natural abilities to take up, accumulate, and/or
+degrade constituents of their soil and water environments.
+This “Plant-assisted bioremediation technique”, involves the interaction of
+plant roots and the microorganisms associated with these root systems to 
+2
+remediate soils containing elevated concentrations of metallic compounds
+(Epstein, 2009). These techniques provides cost-effective methods of
+remediating soils and groundwater contaminated with metals, radionuclides,
+and various types of organics, with fewer secondary wastes and less
+environmental impact than would be generated using traditional remediation
+methods (Bazzaz et al., 2005).
+All plants extract necessary nutrients, including metals, from their soil and
+water environments. Some plants, called hyper-accumulators, have the ability
+to store large amounts of metals, even some metals that do not appear to be
+required for plant functioning. In addition, plants can take up various
+chemicals compounds from environmental media and degrade or otherwise
+process them for use in their physiological processes. Phytoremediation
+technologies are in the early stages of development, with laboratory research
+and field trials being conducted to determine processes and more refined
+methods (Lanza, 2008). Additional research, including genetic engineering, is
+being conducted to improve the natural capabilities of plants to perform
+remediation functions and to investigate other plants with potential
+phytoremediation applications.
+3
+Human activities constitute one of the major means of introducing heavy
+metals into the soil. (Seregin et al., 2004), reported that controlled and
+uncontrolled disposal of wastes, accidental and process spillage, mining and
+smelting of metalliferous ores and sewage sludge application to agricultural
+soils are responsible for the migration of contaminants into the soil. Other
+sources of anthropogenic metal contamination include electroplating, gas
+exhaust, energy and fuel production as well as the application of fertilizer and
+industrial manufacturing (Sharma and Dubey, 2005).
+Nigeria’s quest to develop has necessitated the massive building of
+industries by private entrepreneurs and multinational conglomerates. Land
+as a resource is suddenly becoming scarce and one of the reasons is that the
+Governments at the Federal, State and Local levels take up lots of land for
+infrastructure. Small and medium scale industrialists are also in the land
+acquisition and farmers are not left out. (Lombi et al., 2009), reported that
+undisturbed and pristine arable lands are hard to come by in Nigeria, such
+that abandoned mine fields, dump sites and most available plots are being
+cultivated to meet the ever increasing demand for food. (Lanza, 2008),
+reported that one of the consequences of using dumpsites and exposing the
+‘clean’ soil in the unpopulated areas to external nutrient sources such as
+fertilizer and sewage sludge is the incidence of pollution by heavy metals. 
+4
+Excessive metal concentrations in contaminated soils can result in decreased
+soil microbial activity, soil fertility and yield losses (Lanza, 2008). Unlike
+many organic contaminants, most metals cannot be eliminated from the
+environment by physico-chemical. They do not degrade and are persistent in
+the environment (Bouchier, 2003), though it may however be possible to
+reduce the toxicity by influencing their speciation (Memon et al., 2007). In
+soil these pollutants (metal concentrations) might accumulate in plants to
+unacceptable levels, causing reduction in crop yields and toxic effects in soil
+microorganisms.
+(Seregin et al., 2004), reported that physico-chemical technologies for soil
+remediation render the land useless as a medium for plant growth because the
+technique removes all the biological activities including useful microbes such
+as nitrogen fixing bacteria, mycorrhizal-fungi and the fauna thus decreasing
+biodiversity. Lombi et al. (2009) reported that traditional solutions such as
+disposal of contaminated soil in landfills presently account for a large
+proportion of the remediation operations. It becomes imperative that new
+technologies based on environmentally friendly and low-cost processes be
+employed.
+5
+A promising cost-effective plant-based technology for the cleanup of heavy
+metal pollution is phytoremediation. Lombi et al. (2009) stated that this
+technology has attracted attention in recent years because of the low cost of
+implementation and is particularly attractive in the tropics, where normal
+climatic conditions favour plant growth and microbial activity.
+1.2 Aim and Objectives
+Aim
+The aim of this work was to remove lead from lead-polluted soil through
+phytoremediation using Peperomia pellucida herb
+Objective
+To achieve this aim the following objective were focused on:
+1. To contaminate a certain amount of soil with known concentration of lead
+2. To cultivate P. pellucida in the polluted soil
+3. To determine the concentration of lead in the soil sample
+4. To determine the concentration of lead in the plant.
+1.3 Method
+This study employs the phytoextraction technique, a type of
+phytoremediation method, also referred to as phytoaccumulation, this 
+6
+involves plant roots taking up and translocating contaminants in the soil to
+other parts of the plant. (Memon et al., 2007).
+1.4 The scope of study
+This work entails the following:
+1. Collection of top soil in a wet area and analysis lead concentration in the
+soil.
+2. Pollution of soil with lead compound and left overnight to acclimatize.
+3. Cultivation of the herb in the polluted soil for eight weeks.
+4. Analysis of the lead concentration in soil and herb at interval of a week
+using atomic absorption spectroscope 
+7
+2. CHAPTER TWO
+2.1 Literature review
+Phytoremediation is the direct use of living plants for remediation of
+contaminated soil, sludge, sediments, and ground water through contaminant
+removal, degradation, or containment. Growing and, in some cases,
+harvesting plants on a contaminated site as a remediation method is an
+aesthetically pleasing, solar-energy driven, passive technique that can be used
+to clean up sites with shallow, low to moderate levels of contamination. This
+technique can be used along with or, in some cases, in place of mechanical
+cleanup methods. Phytoremediation can be used to clean up metals,
+pesticides, solvents, explosives, crude oil, polycyclic aromatic hydrocarbons,
+and landfill leachates (Lestan and Helena, 2012).
+Phytoremediation has been studied extensively in research and small-scale
+demonstrations, but full scale applications are currently limited in number.
+Further development and research of the mechanisms described below likely
+will lead to wider acceptance and use of phytoremediation (Epstein, 2009).
+Phytoremediation is a general term for several ways in which plants are used
+to remediate sites by removing pollutants from soil and water. Plants can 
+8
+degrade organic pollutants or contain and stabilize metal contaminants by
+acting as filters or traps. Some of the methods that are being tested are
+described below (Lestan et al., 2012).
+Phytoextraction
+Phytoextraction, also called phytoaccumulation, refers to the uptake and
+translocation of metal contaminants in the soil by plant roots into the
+aboveground portions of the plants. Certain plants called hyperaccumulators
+absorb unusually large amounts of metals in comparison to other plants. One
+or a combination of these plants is selected and planted at a site based on the
+type of metals present and other site conditions. After the plants have been
+allowed to grow for several weeks or months, they are harvested and either
+incinerated or composted to recycle the metals (Bouchier, 2003). This
+procedure may be repeated as necessary to bring soil contaminant levels down
+to allowable limits. If plants are incinerated, the ash must be disposed of in a
+hazardous waste landfill, but the volume of ash will be less than 10% of the
+volume that would be created if the contaminated soil itself were dug up for
+treatment.
+Rhizofiltration
+Rhizofiltration is the adsorption or precipitation onto plant roots or absorption
+into the roots of contaminants that are in solution surrounding the root zone. 
+9
+The plants to be used for cleanup are raised in greenhouses with their roots in
+water rather than in soil (Godbold and Kettner, 1997). To acclimate the plants
+once a large root system has been developed, contaminated water is collected
+from a waste site and brought to the plants where it is substituted for their
+water source (Bouchier, 2003). The plants are then planted in the
+contaminated area where the roots take up the water and the contaminants
+along with it. As the roots become saturated with contaminants, they are
+harvested and either incinerated or composted to recycle the contaminants.
+Phytostabilization
+Phytostabilization is the use of certain plant species to immobilize
+contaminants in the soil and ground water through absorption and
+accumulation by roots, viii adsorption onto roots, or precipitation within the
+root zone. This process reduces the mobility of the contaminant and prevents
+migration to the ground water or air, and it reduces bioavailability for entry
+into the food chain (Lanza, 2008). This technique can be used to reestablish a
+vegetative cover at sites where natural vegetation is lacking due to high metal
+concentrations in surface soils or physical disturbances to surficial materials.
+Metal-tolerant species can be used to restore vegetation to the sites, thereby
+decreasing the potential migration of contamination through wind erosion, 
+10
+transport of exposed surface soils, and leaching of soil contamination to
+ground water.
+Phytodegradation
+Phytodegradation, also called phytotransformation, is the breakdown of
+contaminants taken up by plants through metabolic processes within the plant,
+or the breakdown of contaminants external to the plant through the effect of
+compounds (such as enzymes) produced by the plants. Pollutants are
+degraded, incorporated into the plant tissues, and used as nutrients.
+Rhizodegradation
+Rhizodegradation, also called enhanced rhizosphere biodegradation,
+phytostimulation, or plant-assisted bioremediation/degradation, is the
+breakdown of contaminants in the soil through microbial activity that is
+enhanced by the presence of the rhizosphere and is a much slower process
+than phytodegradation. Microorganisms (yeast, fungi, or bacteria) consume
+and digest organic substances for nutrition and energy. Certain
+microorganisms can digest organic substances such as fuels or solvents that
+are hazardous to humans and break them down into harmless products through
+biodegradation (Bouchier, 2003).
+Natural substances released by the plant roots sugars, alcohols, and acids
+contain organic carbon that provides food for soil microorganisms, and the 
+11
+additional nutrients enhance their activity (Lanza, 2008). Biodegradation is
+also aided by the way plants loosen the soil and transport water to the area.
+Phytovolatilization
+Phytovolatilization is the uptake and transpiration of a contaminant by a plant,
+with release of the contaminant or a modified form of the contaminant to the
+atmosphere from the plant. Phytovolatilization occurs as growing trees and
+other plants take up water and the organic contaminants. Some of these
+contaminants can pass through the plants to the leaves and volatilize into the
+atmosphere at comparatively low concentrations.
+A significant advantage of phytoremediation is that a variety of
+chemical compounds both organic and inorganic are amenable to the
+phytoremediation process. Phytoremediation can be used either as an in situ
+or ex situ application. In situ applications are frequently considered because
+minimizes disturbance of the soil and surrounding environment and reduce
+the spread of contamination via air and waterborne wastes. Another advantage
+of phytoremediation is that it is a green technology and when properly
+implemented is both environmentally friendly and aesthetically pleasing to
+the public.
+Phytoremediation does not require expensive equipment or highly-specialized
+personnel, and it is relatively easy to implement. It is capable of permanently 
+12
+treating a wide range of contaminants in a wide range of environments.
+However, the greatest advantage of phytoremediation is its low cost compared
+to conventional clean-up technologies. For example, the cost of cleaning up
+one acre of sandy loam soil with a contamination depth of 50 cm with plants
+was estimated at $60,000 to $100,000 compared to $400,000 for the
+conventional excavation and disposal method (Bazzaz et al., 2005).
+2.2 Advantages of phytoremediation
+It is capable of treating sites affected by radiological and chemical
+contamination:
+• Trials have shown that key radionuclides such as Sr-90, Cs-137, and isotopes
+of U and Pu are amenable to phytoremediation (Xiong, 2007).
+• The technique is also capable of targeting heavy metals and a number of
+chemicals in the event that a mixture of contaminants are available.
+It is an environmentally beneficial technique:
+• Improves soil quality (physical and chemical) for future use.
+• Improves biodiversity by encouraging the development of local
+ecosystems.
+• Reduces soil erosion and the potential for contamination spread.
+13
+• Results in minimal disruption to the local environment, by avoiding the use
+of intrusive techniques or potentially harmful chemicals.
+• Secondary waste generation is minimized, as harvested biomass can be
+thermally treated.
+It is cost effective:
+• It utilizes standard, off-the-shelf agricultural equipment.
+• It is a passive technique that requires minimal effort following plant
+establishment.
+It is flexible:
+• Can be deployed in both terrestrial and aquatic environments (e.g. pontoons,
+reed beds).
+• Can be deployed in-situ or ex-situ in a more controlled environment.
+• Can be used in conjunction with engineered remediation techniques, on its
+own, or as a polishing step.
+14
+2.3 Disadvantages of Phytoremediation?
+It is unpredictable
+• Plants may not establish.
+• Transfer factors are not well defined.
+• Efficacy is highly dependent on a number of factors (e.g. species selected,
+soil chemistry, etc.)
+• Could result in contamination transfer along food chains.
+It can take a while!
+• Numerous growing seasons may be required to achieve the desired level of
+decontamination.
+• Poor environmental conditions may slow down normal metabolic processes
+and therefore the ability to interact with contamination.
+• It is unlikely to be suitable for areas with high levels of contamination that
+require urgent attention.
+However, there are mitigation measures that can be used to enhance the
+effectiveness of the technique:
+• Introduce already established plants to a site, rather than sowing seeds.
+• Use soil amendments such as chelators or acids to increase contaminant
+availability.
+15
+• Target sites that have no immediate value due to the contamination present
+(e.g. facilities that are entering a care and maintenance phase).
+• Use containment structures such as tents to control the environment (e.g.
+temperature, light, water availability, etc.) and reduce the risk of predation.
+2.4 Peperomia pellucida
+Peperomia pellucida also known as shiny bush or silver bush belonging to
+the genus of the pepper family (Piperaceae) comprising some 1,600 species
+of tropical and subtropical fleshy herbs, annuals as well as perennials. Some
+are epiphytic (growing on the branches of trees). The leaves, sometimes
+attractively coloured with veins or spots, are oval, thick, fleshy, and smoothedged. The thick stalk of the leaf is in some species attached to the centre of
+the underside of the leaf (Brooks, 2009). Flowers are minute and densely
+packed on a slender spike, which is likely to be curved.
+Peperomia pellucida is an herbaceous plant found in many African, South
+American and Asian countries. The species develops during rainy periods
+(often in the spring) and thrives in loose, humid soils under the shade of trees.
+It grows in moist habitat and is found throughout the major parts of southern
+Nigeria. Whole plant or parts of plant are used for different purposes. Despite 
+16
+its wide range of folk medicinal uses, there is very little scientific
+documentation available on its biological activities as well as its chemical
+constituents (Burzynski, 2001).
+2.5 Botanical description of Peperomia pellucida
+Peperomia pellucida is an annular herb with fibrous roots; translucent pale
+green stems which are erect or ascending, usually 15-45 cm long, internodes
+usually 3-8 cm long, glabrous and the leaves are medium green on upper
+surface, lower surface whitish green, thinly fleshy, drying papery, broadly
+ovate, 1.5-4 cm long, 1-3.3 cm wide, palmately 3-nerved or 5-nerved,
+glabrous, apex acuminate, base subcordate to truncate, petioles 0.5-2cm long,
+glabrous. One to several spikes are available, terminal and axillary or leafopposed, filiform, ca. 3-6 cm long, the rachis ca. 0.4-0.6 mm in diameter,
+glabrous, flowers well-spaced, peduncles ca. 0.6-1 cm long, glabrous; ovary
+ovoid; stigmas terminal and also fruits were subglobose, ca. 0.5 mm long,
+longitudinally ridged, apex beaked (Lombi et al., 2009).
+2.6 Phytoconstituents
+The plant Peperomia pellucida was found to have variety of chemical
+constituents. Phytochemical screening revealed the presence of alkaloids,
+cardenolides, saponins and tannins, while anthraquinones was observed to be 
+17
+absent. Stem also contain alkaloid, tannins, flavanoids and steriods, except
+saponins. The roots of Peperomia pellucida also had shown the presence of
+alkaloid, tannins, steroids and carbohydrates etc. The essential oils of the plant
+were found primarily in medical literature. One study identified 71
+compounds from the essential oils of 10 Piperaceae species. Sesquiterpenes
+appear to be the major chemical constituents in the essential oils. Carotol
+(13.41%) was the major hydroxylated sesquiterpene in a chemical analysis of
+Peperomia pellucida. Flavonoids, phytosterols, arylpropanoids (eg, apiols),
+substituted styrenes, and pellucidin A have been isolated. Other compounds,
+like the peperomins, have cytotoxic or anticancer activity in vitro. Isolated
+flavonoids include acacetin, apigenin, isovitexin, and pellucidatin. Isolated
+phytosterols include campesterol and stigmasterol (Memon et al., 2007).
+Observations from scientific studies has proven that peperomia pellucida has
+the ability to sprout and grow in metal laden soils. The plants has a high
+tolerance for metal pollution in soil and is a candidate for remediation
+strategies and management for heavy metals contaminated soils (Sharma and
+Dubey, 2005).
+18
+2.7 Lead
+Lead (Pb) is a bluish-grey metal that occurs naturally in minute amounts
+within the Earth’s crust. It has also been referred to as plumbum, lead metal,
+and pigment metal.
+Frequent use in many industrial processes is the main reason for lead
+contamination of the environment (Huang and Cunningham, 2000). There are
+a variety of industrial processes that involve the use of lead such as mining,
+smelting, manufacture of pesticides and fertilizers, dumping of municipal
+sewage and the burning of fossil fuels that contain a lead additive. Many
+commercial products and materials also contain lead including paints, ceramic
+glazes, television glass, ammunition, batteries, medical equipment (i.e., x-ray
+shields, fetal monitors), and electrical equipment. The uses of lead for roofing
+and the production of ammunition has increased from previous years. Lead
+battery recycling sites, of which 29 have been labeled Superfund sites, and
+manufacturers use more than 80% of the lead produced (Seregin et al., 2004). 
+19
+2.8 Health Effects of lead
+Lead has been listed as a potential carcinogen, inhalation and ingestion are the
+two main routes of exposure, and the effects from both are the same. Lead
+(Pb) accumulates in the body organs (i.e., brain), which may lead to poisoning
+(plumbism) or even death. The gastrointestinal tract, kidneys, and central
+nervous system are also affected by the presence of lead. Children exposed to
+lead are at risk for impaired development, lower IQ, shortened attention span,
+hyperactivity, and mental deterioration, with children under the age of six
+being at a more substantial risk. Adults usually experience decreased reaction
+time, loss of memory, nausea, insomnia, anorexia, and weakness of the joints
+when exposed to lead (Xiong, 2000).
+20
+3. CHAPTER THREE
+3.1 Materials and methods
+3.2 Materials
+TABLE 3. 1: LIST OF MATERIALS
+S/N Materials Source Physical and Chemical
+Properties
+1 Lead(II)
+nitrate
+(Pb(NO3)2
+Chemical engineering
+laboratory, University
+of Benin
+Molecular weight: 331.2g/mol
+Colour: white crystals
+Odour: odourless
+Solubility: soluble in water
+2 Nitric acid
+HNO3
+Chemical engineering
+laboratory, University
+of Benin
+Molecular weight: 63.01g/mol
+Colour: colorless
+Odour: acrid, suffocatin
+Solubility: soluble in water
+3 De-ionized
+water
+Chemistry laboratory,
+University of Benin
+Appearance: colourless
+Odour: odourless 
+21
+Table 3.2: List of Equipment and Apparatus 1
+S/N Equipment/Apparatus Operational characteristics
+1 Atomic adsorption spectroscopy
+(AAS)
+Wavelength range: 185-900nm.
+Focal Length : 400mm
+2 Muffle furnace Model: OPTIMA OS-752
+Revolution per minute: 120rpm
+3 Weighing balance Model: METTLER PM4800
+Sensitivity: 0.001g
+4 Oven Model: SHASHIO-3500
+Heating capacity: 2500C
+22
+Table 3.3 Glassware 1
+Apparatus Operational characteristics
+Beaker 50ml, 250ml, 500ml
+Conical flask 500ml capacity
+Funnels 20ml
+Standard flask 25ml, 500ml, 1000ml standard
+Measuring cylinder 50ml capacity
+Desiccator 250cm3
+Crucibles Porcelain crucibles
+Sample bottles (plastic) 25ml 
+23
+3.3 METHOD
+This experiment was conducted within the period of eight weeks of plant
+growth and soil treatment in a lead contaminated soil. The sample contained
+10kg of soil with 500ppm of lead contamination with the plant weighing 700g,
+was cultivated under shady environment (but exposed enough to receive
+sunlight) during the period of experiment. Water was sprinkled on the plant
+regularly in a succession of two days interval. With a careful and notable
+observation of the plant (Flathman and Lanza, 2008).
+3.4 Plant and soil collection/preparation
+The herb peperomia pellucida were collected from the premises of the
+Faculty of Agricultural Science, University of Benin. The plants were
+collected by uprooting it together with the soil, and was conveyed in
+polyethylene bags to the site for transplanting.
+The soil was collected from the top 12 inches of the marsh area at the
+Department of Chemical Engineering University of Benin, it was weighed and
+stored in the sample bowl. Both the plant and the soil were then taken to the
+laboratory for further preparation (Flathman and Lanza, 2008).
+24
+3.5 On site preparation.
+The soil was air dried for a period of two weeks, this was done in order to
+reduce the moisture content and organic matter present in the soil. A sample
+of the soil was sent to the laboratory for further analysis. The soil on the roots
+of the collected plants were washed off, weighed with a balance and taken to
+the laboratory for further preparation.
+3.6 Preparation of lead solution
+To prepare 500ppm of lead, 0.799g of Pb(NO3)2 was dissolved in a 1liter of
+distilled water. (See appendix II for the calculation).
+3.7 Soil contamination
+Five kilograms of the air-dry soil was placed into the bowl (previously washed
+clean with distilled and deionized water). Lead in the form of lead salt
+(PbNO3)2 was then added to the soil to achieve the 500ppm level of leadcontamination. The amount of (PbNO3)2 added was 0.799g (PbNO3)2 for 500
+ppm contamination. The soil and (PbNO3)2 were stirred and mixed with
+deionized water to bring the soils to saturation. After the soil and (PbNO3)2
+were mixed, another 5kg of the air dried soil was added to the mixture to bring
+the total soil mass to 10kg. The soil was brought to saturation again. . The 
+25
+mixture was allowed to sit for a day in darkness to allow for the soil solution
+and (PbNO3)2 to come to equilibrium (Brooks, 2009).
+3.8 Plant propagation and growth period
+The peperomia pellucida herb was introduced into the contaminated soil
+samples, and water of about 1 liter was sprinkled on the plants and the buckets
+were placed at the base of a tree to shade the plant from direct contact with
+the sun but exposed enough to receive the necessary amount of sun light
+needed for propagation.
+ As the peperomia pellucida grew in size, it remained partially shaded
+from direct sunlight throughout the duration of the experiment, the plants/ soil
+were regularly watered (every two days interval) as needed to keep them
+inundated with approximately 20ml to 50ml of water. The watering continued
+for the entire 8 weeks of growth.
+At week six, the primary vegetative shoots of the regrowth treatment
+were collected by cutting the shoots 3.5 cm above the surface of the soil. The
+harvested shoots were taken to the laboratory for analysis of lead content
+After 8 weeks of growth, all of the shoots were harvested.
+26
+3.9 Sample extraction
+The vegetative shoots and roots were extracted, by gently uprooting the plant
+by the shoot and placed in brown paper bags rinsed and allowed to air dry for
+2 to 3 hours (Meagher, 2010).
+While the soil samples were extracted with the aid of a spade placed into
+sealable plastic sample bags for soil-lead analysis.
+3.10 Plant and soil samples pretreatment
+Plant samples collected from the experiment site were washed under running
+tap water to remove adhered soils. The samples were dried in an oven for 48
+h at 80oC (Meagher, 2010). The dried samples were ground using agate mortar
+and pestle, sieved to 2mm and transferred to polyethylene bags for storage
+until later analysis. The soil samples were air-dried at room temperature for
+two weeks, mechanically ground and sieved to 2 mm diameter size.
+3.11 Lead in soil
+The 2 mm fraction soil samples were digested to determine the maximal
+environmentally available heavy metals. This was done using 2 M HNO3 in
+centrifuge tubes which were placed in boiling water in a 1 L beaker on a hot
+plate for 2 hours and shaken at 20 min intervals. The digested samples were 
+27
+filtered into 25mL standard. The filtrates were diluted to the marks on the
+flasks with deionized water and stored in polyethylene tubes prior to
+instrumental analysis (Meagher, 2010).
+3.12 Lead in Plant
+The roots and shoots of the plants were analyzed together for heavy metal
+content. 1 g of 2 mm fraction plant samples was weighed into porcelain
+crucibles and was ignited in a muffle furnace for 6 h at a temperature between
+450 - 500oC. Grey white ash was obtained at the completion of the ashing.
+The ash samples were allowed to cool and then 10 mL of 2 M HNO3 was
+added to each sample (Flathman and Lanza, 2008). The solution was
+evaporated to near dryness on a hot plate and the cooled residues were redissolved in 10 mL 2 M HNO3. The solutions were then filtered into 25 mL
+volumetric flasks. Both the crucible and the filter paper were washed into the
+flasks, made up with deionized water and then stored in polyethylene tubes
+for instrumental analysis (Blaylock et al., 2007). Atomic absorption
+spectrophotometer Buck Scientific 200 was used to analyze soil and plant
+digests for lead.
+28
+4. CHAPTER FOUR
+4.1 Result and discussion
+4.2 Result
+Table 4.1 : Result from the analysis of lead in soil and plant using Atomic
+absorption spectrophotometer lead (AAS)
+Weeks Pb2+ in soil (mg/kg) Pb2+ in Plant (mg/kg)
+0. 63.86 0.46
+1. 50.70 13.62
+2. 43.10 15.00
+3. 40.14 19.80
+4. 35.56 24.73
+5. 33.92 24.09
+6. 29.29 23.78
+7. 25.24 22.29
+8. 20.02 21.20
+29
+Figure 4.1: chart showing the accumulation of lead from soil by plant
+0
+10
+20
+30
+40
+50
+60
+1 2 3 4 5 6 7 8
+Period of cultivation in weeks
+SOIL
+PLANT
+Concentration of lead (mg/kg)
+30
+Figure 4.2: Rate of phytoremediation
+0
+10
+20
+30
+40
+50
+60
+1
+2
+3
+4
+5
+6
+7
+8
+CONCENTRATION OF LEAD (MG/KG)
+Period of cultivation in weeks
+soil
+plant
+31
+4.3 Discussion
+4.4 Sample analysis
+The lead accumulation was analyzed in the laboratory using the atomic
+assumption spectroscopy (AAS) weekly, the lead concentration was reported
+in mg/kg dry tissue for both the plant and soil (see table 4.1). The actual
+milligram of lead uptake was analyzed to determined feasibility of the
+remediation. A reasonable amount of the Lead concentration of was absorbed
+by the plant out of the contaminated soil.
+4.5 Plant observation
+During the period of cultivation, the only visual sign of plant stress was
+reduced growth in the plants apparently due to the 500 ppm lead present in
+the soil. Browning and death of shoot tips and yellowing of the margins was
+noticed (see Figure 3 and 4). The tip death in plant was suspected to have
+been caused by the salt effect and heavy-metal uptake from the lead complex.
+Peperomia pellucida demonstrated its tolerance to lead-contaminated soil, in
+that the plant survived and significantly treated the lead contaminated soil
+within the period of 8 weeks. From the result one could ascertain that the plant
+might have reached hyperaccumulator status. 
+32
+4.6 Accumulation of lead by Peperomia pellucida
+In the uptake and translocation of sufficient quantities of lead to enhance
+effective phytoremediation system for lead-contaminated soil using P.
+pellucida, the plants was cultivated under shady environment. However, as
+presented in the literature review, there are several aspects that are very
+promising for lead phytoremediation using P. pellucida herb in a natural
+setting, as it can proliferate rapidly, yielding in multiple harvest within a short
+period of time as opposed to one harvest per year as in the case of some other
+hyperaccumulating plants (Lee and Bukaveckas, 2002). The remediation time
+required for a lead phytoremediation approach with this herb could be
+theoretically reduced seasonally (Bouchier, 2003). During the course of
+remediation the herb approached hyperaccumulator status and accumulated
+significantly greater quantities as well as higher concentrations of lead. The
+herb proved to have high tolerance to increased levels of lead contamination.
+In the eighth weeks of growth the plant grown in the 500 ppm contaminated
+soils were approaching the same height as the herb grown without lead
+contamination (control sample). Peperomia pellucida have a strong tolerance
+for many heavy metal contaminants and this study corroborates previous
+reports of the herb’s tolerance to lead (Bontidean et al., 2003).
+33
+5. CHAPTER FIVE
+5.1 Conclusion and Recommendation
+5.2 Conclusion
+This phytoremediation approach carried out by growing peperomia pellucida
+herb in lead-contaminated soil have been seen in similar studies conducted
+hydroponically by (Epstein, 2009) as a chemically enhanced leadphytoremediation approach. A number of different laboratory and field
+studies have been conducted focusing on the phytoremediation of lead (Pb).
+The results have been very promising, although further research and
+understanding of the process is still required.
+Phytoremediation is considered to be an innovative technology and hopefully
+by increasing our knowledge and understanding of this intricate clean up
+method, it will provide as a cost-effective, environmentally friendly
+alternative to conventional cleanup methods.
+Peperomia pellucida may be considered a weed in many places, but it is a
+promising lead-phytoremediation candidate that is likely to find a home in
+the world of phytoremediation of heavy metals in soil.
+34
+5.3 Recommendation
+ Phytoremediation using Peperomia pellucida is a potential remediation
+strategy that can be used to decontaminate soils contaminated with lead
+pollutants. Research related to this relatively new technology needs to
+be promoted and emphasized and expanded and developed, since it is
+of a relatively low cost.
+ This technology can be enhanced and applied to remediate shallow soil,
+ground water and surface water bodies.
+ Aged soils are more difficult to phytoremediate than freshly
+contaminated ones. Therefore it is recommended that phytoremediation
+is done quickly on soils freshly contaminated than aged ones.
+ Research needs to be developed on optimizing crop management
+practices that can maximize the cleanup potential of remediative plants,
+such as sowing practices and seedbed conditions, irrigation, crop
+rotations, crop cycle duration, harvesting schedule and methods,
+ The effects on metal uptake of all these aspects must be tested in the
+field under different site-specific conditions and on multi-contaminated
+soil.
+35
+6. REFERENCE
+Bazzaz, F. A., Carlson, R. W., Rolfe G. L (2005). The inhibition of corn and
+soybean photosynthesis by lead. Physiologia of Plantarum 34: 326-
+329.
+Blaylock, M. J., Salt, D. E., Dushenkov, S., Zakharova, O., Gussman, C.,
+Kapulnik, Y., Ensley, B. D., and Raskin, I. (2007). Enhanced
+accumulation of lead (Pb) in Indian mustard by soil-applied chelating
+agents. Environmental Science and Technology 3: 860-865.
+Bontidean, I., Josefin A., Ashok M., Wilfred C., Weon B., Rajesh K. M.,
+Alessia M., Elisabeth C., (2003). Novel synthetic phytochelatin -based
+capacitive biosensor for heavy metal ion detection. Biosensors and
+Bioelectronics 18: 547-553.
+Bouchier, T. (2003). Lead distribution and ultrastructural changes induced by
+lead in shoot tissue of Brassica juncea (Indian mustard). Factors
+influencing shoot production and mineral nutrient levels in juncea
+(Indian mustard) Ecology 51: 296-300. 
+36
+Brooks, R. R., Lee, J., Reeves, R. D., and Jaffre, T. (2009). Detection of
+nickeliferous rocks by analysis of herbarium specimens of indicator
+plants. Journal of Geochemical Exploration 7: 49-57.
+Burzynski, M. (2001). The influence of lead and cadmium on the absorption
+and distribution of potassium, calcium, magnesium, and iron in
+cucumber seedlings. Physiologia Plantarum 9: 229-238.
+Chapin I. I., and Slack, F. S. (1998). Effect of defoliation upon root growth,
+phosphate absorption and respiration in nutrient-limited tundra
+graminoids. Oecologia 1: 6779.
+Epstein, A. L., Gussman, C. D. Blaylock, M. J., Yermiyahu, U., Huang, J.
+W., Kapulnik, Y. and Orser, C. S., (2009). Lead accumulation in
+Brassica juncea grown in lead-amended soil. Plant and Soil 20: 87-94.
+Flathman, P. E. and Lanza, G. R. (2008). Phytoremediation: current views
+on an emerging technology. Journal of Soil Contamination 7: 415-432.
+Godbold, D. L., Kettner, C. (1997). Lead influences root growth and mineral
+nutrition of Picea abies seedlings. Journal of Plant Physiology 139: 95-
+99. 
+37
+Huang, J. W. and Cunningham, S. D. (2000). Lead phytoextraction: Species
+variation in lead uptake and translocation. New Phytologist 134: 75-
+84.
+Lantzy, R. J. and Mackenzie, F. T., (2004). Atmospheric trace metals; global
+cycles and assessment of man’s impact. Geochimica et Cosmochimica
+43: 511-525.
+Lanza. (2008). Removal of lead from contaminated soils by Typha
+angustifolia. Water, Air, and Soil Pollution 2000: 1-13.
+Lee, A. A. and Bukaveckas, P. A., (2002). Surface water nutrient
+concentrations and litter decomposition rates in wetlands impacted by
+agriculture and mining activities. Aquatic Botany 74: 273-285.
+Lestan, D., and Helena G. (2012). Chelate enhanced lead phytoextraction:
+plant uptake, leaching and toxicity. Pp.42. paper no. 1701.
+Lombi, E., Zhao, F. J., Dunham, S. P., McGrath. S. J. (2009). phytoremediation
+of heavy metal-contaminated soils: natural hyperaccumulation versus
+chemically enhanced phytoextraction. Journal of Environmental
+Quality 30: 1919-1926.
+38
+Meagher, R. B. (2010). Phytoremediation of toxic elemental and organic
+pollutants. Current Opinions in Plant Biology 3: 153-162.
+Memon, A. R., Aktoprakligil, D., Ozdemir, A. and Vertii., A., (2007). Heavy
+metal accumulation and detoxification mechanisms in plants. Turkish
+Journal of Botany 25: 111-121.
+Seregin, I. V., Shpigun, L. K., Ivaniov, V. B. (2004). Distribution
