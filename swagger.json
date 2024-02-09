@@ -1,0 +1,36 @@
+{
+  "openapi": "3.0.0", 
+  "info": {
+    "title": "Sample API", 
+    "description": "A simple API to demonstrate OpenAPI 3.0 code generation with MVN",
+    "version": "1.0.0" 
+  },
+  "servers": [
+    {
+      "url": "" 
+    }
+  ],
+  "paths": {
+    "/aclinesegment": {
+      "get": {
+        "summary": "AC Line Segment API Documentation",
+        "description": "Returns an instance of ACLineSegment",
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "https://raw.githubusercontent.com/believeohiozua/talesarena/main/document.json#/definitions/ACLineSegment"  
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
