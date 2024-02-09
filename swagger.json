@@ -1,19 +1,19 @@
 {
   "swagger": "2.0",
   "info": {
-    "title": "Sample API", 
+    "title": "Sample API",
     "description": "A simple API to demonstrate OpenAPI 3.0 code generation with MVN",
-    "version": "1.0.0" 
+    "version": "1.0.0"
   },
   "servers": [
     {
-      "url": "" 
+      "url": ""
     }
   ],
   "paths": {
-    "/aclinesegment": {
+    "/ACLineSegment": {
       "get": {
-        "summary": "AC Line Segment API Documentation",
+        "summary": "ACLineSegment API Documentation",
         "description": "Returns an instance of ACLineSegment",
         "responses": {
           "200": {
@@ -23,7 +23,2863 @@
                 "schema": {
                   "type": "array",
                   "items": {
-                    "$ref": "https://raw.githubusercontent.com/believeohiozua/talesarena/main/document.json#/definitions/ACLineSegment"  
+                    "$ref": "https://raw.githubusercontent.com/believeohiozua/talesarena/main/document.json#/definitions/ACLineSegment"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/ACLineSegmentPhase": {
+      "get": {
+        "summary": "ACLineSegmentPhase API Documentation",
+        "description": "Returns an instance of ACLineSegmentPhase",
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "https://raw.githubusercontent.com/believeohiozua/talesarena/main/document.json#/definitions/ACLineSegmentPhase"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/AsynchronousMachine": {
+      "get": {
+        "summary": "AsynchronousMachine API Documentation",
+        "description": "Returns an instance of AsynchronousMachine",
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "https://raw.githubusercontent.com/believeohiozua/talesarena/main/document.json#/definitions/AsynchronousMachine"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/AsynchronousMachineKind": {
+      "get": {
+        "summary": "AsynchronousMachineKind API Documentation",
+        "description": "Returns an instance of AsynchronousMachineKind",
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "https://raw.githubusercontent.com/believeohiozua/talesarena/main/document.json#/definitions/AsynchronousMachineKind"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/AsynchronousMachineKind1": {
+      "get": {
+        "summary": "AsynchronousMachineKind1 API Documentation",
+        "description": "Returns an instance of AsynchronousMachineKind1",
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "https://raw.githubusercontent.com/believeohiozua/talesarena/main/document.json#/definitions/AsynchronousMachineKind1"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/BaseVoltage": {
+      "get": {
+        "summary": "BaseVoltage API Documentation",
+        "description": "Returns an instance of BaseVoltage",
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "https://raw.githubusercontent.com/believeohiozua/talesarena/main/document.json#/definitions/BaseVoltage"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/Breaker": {
+      "get": {
+        "summary": "Breaker API Documentation",
+        "description": "Returns an instance of Breaker",
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "https://raw.githubusercontent.com/believeohiozua/talesarena/main/document.json#/definitions/Breaker"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/BusbarSection": {
+      "get": {
+        "summary": "BusbarSection API Documentation",
+        "description": "Returns an instance of BusbarSection",
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "https://raw.githubusercontent.com/believeohiozua/talesarena/main/document.json#/definitions/BusbarSection"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/Clamp": {
+      "get": {
+        "summary": "Clamp API Documentation",
+        "description": "Returns an instance of Clamp",
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "https://raw.githubusercontent.com/believeohiozua/talesarena/main/document.json#/definitions/Clamp"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/ClampAction": {
+      "get": {
+        "summary": "ClampAction API Documentation",
+        "description": "Returns an instance of ClampAction",
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "https://raw.githubusercontent.com/believeohiozua/talesarena/main/document.json#/definitions/ClampAction"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/CompositeSwitch": {
+      "get": {
+        "summary": "CompositeSwitch API Documentation",
+        "description": "Returns an instance of CompositeSwitch",
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "https://raw.githubusercontent.com/believeohiozua/talesarena/main/document.json#/definitions/CompositeSwitch"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/Conductor": {
+      "get": {
+        "summary": "Conductor API Documentation",
+        "description": "Returns an instance of Conductor",
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "https://raw.githubusercontent.com/believeohiozua/talesarena/main/document.json#/definitions/Conductor"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/Connector": {
+      "get": {
+        "summary": "Connector API Documentation",
+        "description": "Returns an instance of Connector",
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "https://raw.githubusercontent.com/believeohiozua/talesarena/main/document.json#/definitions/Connector"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/CoolantType": {
+      "get": {
+        "summary": "CoolantType API Documentation",
+        "description": "Returns an instance of CoolantType",
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "https://raw.githubusercontent.com/believeohiozua/talesarena/main/document.json#/definitions/CoolantType"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/Cut": {
+      "get": {
+        "summary": "Cut API Documentation",
+        "description": "Returns an instance of Cut",
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "https://raw.githubusercontent.com/believeohiozua/talesarena/main/document.json#/definitions/Cut"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/CutAction": {
+      "get": {
+        "summary": "CutAction API Documentation",
+        "description": "Returns an instance of CutAction",
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "https://raw.githubusercontent.com/believeohiozua/talesarena/main/document.json#/definitions/CutAction"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/DisconnectingCircuitBreaker": {
+      "get": {
+        "summary": "DisconnectingCircuitBreaker API Documentation",
+        "description": "Returns an instance of DisconnectingCircuitBreaker",
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "https://raw.githubusercontent.com/believeohiozua/talesarena/main/document.json#/definitions/DisconnectingCircuitBreaker"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/Disconnector": {
+      "get": {
+        "summary": "Disconnector API Documentation",
+        "description": "Returns an instance of Disconnector",
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "https://raw.githubusercontent.com/believeohiozua/talesarena/main/document.json#/definitions/Disconnector"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/EarthFaultCompensator": {
+      "get": {
+        "summary": "EarthFaultCompensator API Documentation",
+        "description": "Returns an instance of EarthFaultCompensator",
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "https://raw.githubusercontent.com/believeohiozua/talesarena/main/document.json#/definitions/EarthFaultCompensator"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/EnergyConnection": {
+      "get": {
+        "summary": "EnergyConnection API Documentation",
+        "description": "Returns an instance of EnergyConnection",
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "https://raw.githubusercontent.com/believeohiozua/talesarena/main/document.json#/definitions/EnergyConnection"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/EnergyConsumer": {
+      "get": {
+        "summary": "EnergyConsumer API Documentation",
+        "description": "Returns an instance of EnergyConsumer",
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "https://raw.githubusercontent.com/believeohiozua/talesarena/main/document.json#/definitions/EnergyConsumer"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/EnergyConsumerAction": {
+      "get": {
+        "summary": "EnergyConsumerAction API Documentation",
+        "description": "Returns an instance of EnergyConsumerAction",
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "https://raw.githubusercontent.com/believeohiozua/talesarena/main/document.json#/definitions/EnergyConsumerAction"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/EnergyConsumerPhase": {
+      "get": {
+        "summary": "EnergyConsumerPhase API Documentation",
+        "description": "Returns an instance of EnergyConsumerPhase",
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "https://raw.githubusercontent.com/believeohiozua/talesarena/main/document.json#/definitions/EnergyConsumerPhase"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/EnergySchedulingType": {
+      "get": {
+        "summary": "EnergySchedulingType API Documentation",
+        "description": "Returns an instance of EnergySchedulingType",
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "https://raw.githubusercontent.com/believeohiozua/talesarena/main/document.json#/definitions/EnergySchedulingType"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/EnergySource": {
+      "get": {
+        "summary": "EnergySource API Documentation",
+        "description": "Returns an instance of EnergySource",
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "https://raw.githubusercontent.com/believeohiozua/talesarena/main/document.json#/definitions/EnergySource"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/EnergySourceAction": {
+      "get": {
+        "summary": "EnergySourceAction API Documentation",
+        "description": "Returns an instance of EnergySourceAction",
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "https://raw.githubusercontent.com/believeohiozua/talesarena/main/document.json#/definitions/EnergySourceAction"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/EnergySourcePhase": {
+      "get": {
+        "summary": "EnergySourcePhase API Documentation",
+        "description": "Returns an instance of EnergySourcePhase",
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "https://raw.githubusercontent.com/believeohiozua/talesarena/main/document.json#/definitions/EnergySourcePhase"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/ExternalNetworkInjection": {
+      "get": {
+        "summary": "ExternalNetworkInjection API Documentation",
+        "description": "Returns an instance of ExternalNetworkInjection",
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "https://raw.githubusercontent.com/believeohiozua/talesarena/main/document.json#/definitions/ExternalNetworkInjection"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/FrequencyConverter": {
+      "get": {
+        "summary": "FrequencyConverter API Documentation",
+        "description": "Returns an instance of FrequencyConverter",
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "https://raw.githubusercontent.com/believeohiozua/talesarena/main/document.json#/definitions/FrequencyConverter"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/Fuse": {
+      "get": {
+        "summary": "Fuse API Documentation",
+        "description": "Returns an instance of Fuse",
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "https://raw.githubusercontent.com/believeohiozua/talesarena/main/document.json#/definitions/Fuse"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/GeneratingUnit": {
+      "get": {
+        "summary": "GeneratingUnit API Documentation",
+        "description": "Returns an instance of GeneratingUnit",
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "https://raw.githubusercontent.com/believeohiozua/talesarena/main/document.json#/definitions/GeneratingUnit"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/Ground": {
+      "get": {
+        "summary": "Ground API Documentation",
+        "description": "Returns an instance of Ground",
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "https://raw.githubusercontent.com/believeohiozua/talesarena/main/document.json#/definitions/Ground"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/GroundAction": {
+      "get": {
+        "summary": "GroundAction API Documentation",
+        "description": "Returns an instance of GroundAction",
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "https://raw.githubusercontent.com/believeohiozua/talesarena/main/document.json#/definitions/GroundAction"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/GroundDisconnector": {
+      "get": {
+        "summary": "GroundDisconnector API Documentation",
+        "description": "Returns an instance of GroundDisconnector",
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "https://raw.githubusercontent.com/believeohiozua/talesarena/main/document.json#/definitions/GroundDisconnector"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/GroundingImpedance": {
+      "get": {
+        "summary": "GroundingImpedance API Documentation",
+        "description": "Returns an instance of GroundingImpedance",
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "https://raw.githubusercontent.com/believeohiozua/talesarena/main/document.json#/definitions/GroundingImpedance"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/HydroPump": {
+      "get": {
+        "summary": "HydroPump API Documentation",
+        "description": "Returns an instance of HydroPump",
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "https://raw.githubusercontent.com/believeohiozua/talesarena/main/document.json#/definitions/HydroPump"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/Jumper": {
+      "get": {
+        "summary": "Jumper API Documentation",
+        "description": "Returns an instance of Jumper",
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "https://raw.githubusercontent.com/believeohiozua/talesarena/main/document.json#/definitions/Jumper"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/JumperAction": {
+      "get": {
+        "summary": "JumperAction API Documentation",
+        "description": "Returns an instance of JumperAction",
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "https://raw.githubusercontent.com/believeohiozua/talesarena/main/document.json#/definitions/JumperAction"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/Junction": {
+      "get": {
+        "summary": "Junction API Documentation",
+        "description": "Returns an instance of Junction",
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "https://raw.githubusercontent.com/believeohiozua/talesarena/main/document.json#/definitions/Junction"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/Line": {
+      "get": {
+        "summary": "Line API Documentation",
+        "description": "Returns an instance of Line",
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "https://raw.githubusercontent.com/believeohiozua/talesarena/main/document.json#/definitions/Line"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/LinearShuntCompensator": {
+      "get": {
+        "summary": "LinearShuntCompensator API Documentation",
+        "description": "Returns an instance of LinearShuntCompensator",
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "https://raw.githubusercontent.com/believeohiozua/talesarena/main/document.json#/definitions/LinearShuntCompensator"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/LinearShuntCompensatorPhase": {
+      "get": {
+        "summary": "LinearShuntCompensatorPhase API Documentation",
+        "description": "Returns an instance of LinearShuntCompensatorPhase",
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "https://raw.githubusercontent.com/believeohiozua/talesarena/main/document.json#/definitions/LinearShuntCompensatorPhase"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/LoadBreakSwitch": {
+      "get": {
+        "summary": "LoadBreakSwitch API Documentation",
+        "description": "Returns an instance of LoadBreakSwitch",
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "https://raw.githubusercontent.com/believeohiozua/talesarena/main/document.json#/definitions/LoadBreakSwitch"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/LoadResponseCharacteristic": {
+      "get": {
+        "summary": "LoadResponseCharacteristic API Documentation",
+        "description": "Returns an instance of LoadResponseCharacteristic",
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "https://raw.githubusercontent.com/believeohiozua/talesarena/main/document.json#/definitions/LoadResponseCharacteristic"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/MutualCoupling": {
+      "get": {
+        "summary": "MutualCoupling API Documentation",
+        "description": "Returns an instance of MutualCoupling",
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "https://raw.githubusercontent.com/believeohiozua/talesarena/main/document.json#/definitions/MutualCoupling"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/NonlinearShuntCompensator": {
+      "get": {
+        "summary": "NonlinearShuntCompensator API Documentation",
+        "description": "Returns an instance of NonlinearShuntCompensator",
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "https://raw.githubusercontent.com/believeohiozua/talesarena/main/document.json#/definitions/NonlinearShuntCompensator"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/NonlinearShuntCompensatorPhase": {
+      "get": {
+        "summary": "NonlinearShuntCompensatorPhase API Documentation",
+        "description": "Returns an instance of NonlinearShuntCompensatorPhase",
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "https://raw.githubusercontent.com/believeohiozua/talesarena/main/document.json#/definitions/NonlinearShuntCompensatorPhase"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/NonlinearShuntCompensatorPhasePoint": {
+      "get": {
+        "summary": "NonlinearShuntCompensatorPhasePoint API Documentation",
+        "description": "Returns an instance of NonlinearShuntCompensatorPhasePoint",
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "https://raw.githubusercontent.com/believeohiozua/talesarena/main/document.json#/definitions/NonlinearShuntCompensatorPhasePoint"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/NonlinearShuntCompensatorPoint": {
+      "get": {
+        "summary": "NonlinearShuntCompensatorPoint API Documentation",
+        "description": "Returns an instance of NonlinearShuntCompensatorPoint",
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "https://raw.githubusercontent.com/believeohiozua/talesarena/main/document.json#/definitions/NonlinearShuntCompensatorPoint"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/PerLengthImpedance": {
+      "get": {
+        "summary": "PerLengthImpedance API Documentation",
+        "description": "Returns an instance of PerLengthImpedance",
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "https://raw.githubusercontent.com/believeohiozua/talesarena/main/document.json#/definitions/PerLengthImpedance"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/PerLengthImpedance1": {
+      "get": {
+        "summary": "PerLengthImpedance1 API Documentation",
+        "description": "Returns an instance of PerLengthImpedance1",
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "https://raw.githubusercontent.com/believeohiozua/talesarena/main/document.json#/definitions/PerLengthImpedance1"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/PerLengthLineParameter": {
+      "get": {
+        "summary": "PerLengthLineParameter API Documentation",
+        "description": "Returns an instance of PerLengthLineParameter",
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "https://raw.githubusercontent.com/believeohiozua/talesarena/main/document.json#/definitions/PerLengthLineParameter"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/PerLengthPhaseImpedance": {
+      "get": {
+        "summary": "PerLengthPhaseImpedance API Documentation",
+        "description": "Returns an instance of PerLengthPhaseImpedance",
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "https://raw.githubusercontent.com/believeohiozua/talesarena/main/document.json#/definitions/PerLengthPhaseImpedance"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/PerLengthSequenceImpedance": {
+      "get": {
+        "summary": "PerLengthSequenceImpedance API Documentation",
+        "description": "Returns an instance of PerLengthSequenceImpedance",
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "https://raw.githubusercontent.com/believeohiozua/talesarena/main/document.json#/definitions/PerLengthSequenceImpedance"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/PetersenCoil": {
+      "get": {
+        "summary": "PetersenCoil API Documentation",
+        "description": "Returns an instance of PetersenCoil",
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "https://raw.githubusercontent.com/believeohiozua/talesarena/main/document.json#/definitions/PetersenCoil"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/PetersenCoilModeKind": {
+      "get": {
+        "summary": "PetersenCoilModeKind API Documentation",
+        "description": "Returns an instance of PetersenCoilModeKind",
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "https://raw.githubusercontent.com/believeohiozua/talesarena/main/document.json#/definitions/PetersenCoilModeKind"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/PetersenCoilModeKind1": {
+      "get": {
+        "summary": "PetersenCoilModeKind1 API Documentation",
+        "description": "Returns an instance of PetersenCoilModeKind1",
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "https://raw.githubusercontent.com/believeohiozua/talesarena/main/document.json#/definitions/PetersenCoilModeKind1"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/PhaseCode": {
+      "get": {
+        "summary": "PhaseCode API Documentation",
+        "description": "Returns an instance of PhaseCode",
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "https://raw.githubusercontent.com/believeohiozua/talesarena/main/document.json#/definitions/PhaseCode"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/PhaseImpedanceData": {
+      "get": {
+        "summary": "PhaseImpedanceData API Documentation",
+        "description": "Returns an instance of PhaseImpedanceData",
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "https://raw.githubusercontent.com/believeohiozua/talesarena/main/document.json#/definitions/PhaseImpedanceData"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/PhaseShuntConnectionKind": {
+      "get": {
+        "summary": "PhaseShuntConnectionKind API Documentation",
+        "description": "Returns an instance of PhaseShuntConnectionKind",
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "https://raw.githubusercontent.com/believeohiozua/talesarena/main/document.json#/definitions/PhaseShuntConnectionKind"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/PhaseShuntConnectionKind1": {
+      "get": {
+        "summary": "PhaseShuntConnectionKind1 API Documentation",
+        "description": "Returns an instance of PhaseShuntConnectionKind1",
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "https://raw.githubusercontent.com/believeohiozua/talesarena/main/document.json#/definitions/PhaseShuntConnectionKind1"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/PhaseTapChanger": {
+      "get": {
+        "summary": "PhaseTapChanger API Documentation",
+        "description": "Returns an instance of PhaseTapChanger",
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "https://raw.githubusercontent.com/believeohiozua/talesarena/main/document.json#/definitions/PhaseTapChanger"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/PhaseTapChangerAsymmetrical": {
+      "get": {
+        "summary": "PhaseTapChangerAsymmetrical API Documentation",
+        "description": "Returns an instance of PhaseTapChangerAsymmetrical",
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "https://raw.githubusercontent.com/believeohiozua/talesarena/main/document.json#/definitions/PhaseTapChangerAsymmetrical"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/PhaseTapChangerLinear": {
+      "get": {
+        "summary": "PhaseTapChangerLinear API Documentation",
+        "description": "Returns an instance of PhaseTapChangerLinear",
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "https://raw.githubusercontent.com/believeohiozua/talesarena/main/document.json#/definitions/PhaseTapChangerLinear"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/PhaseTapChangerNonLinear": {
+      "get": {
+        "summary": "PhaseTapChangerNonLinear API Documentation",
+        "description": "Returns an instance of PhaseTapChangerNonLinear",
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "https://raw.githubusercontent.com/believeohiozua/talesarena/main/document.json#/definitions/PhaseTapChangerNonLinear"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/PhaseTapChangerSymmetrical": {
+      "get": {
+        "summary": "PhaseTapChangerSymmetrical API Documentation",
+        "description": "Returns an instance of PhaseTapChangerSymmetrical",
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "https://raw.githubusercontent.com/believeohiozua/talesarena/main/document.json#/definitions/PhaseTapChangerSymmetrical"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/PhaseTapChangerTable": {
+      "get": {
+        "summary": "PhaseTapChangerTable API Documentation",
+        "description": "Returns an instance of PhaseTapChangerTable",
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "https://raw.githubusercontent.com/believeohiozua/talesarena/main/document.json#/definitions/PhaseTapChangerTable"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/PhaseTapChangerTablePoint": {
+      "get": {
+        "summary": "PhaseTapChangerTablePoint API Documentation",
+        "description": "Returns an instance of PhaseTapChangerTablePoint",
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "https://raw.githubusercontent.com/believeohiozua/talesarena/main/document.json#/definitions/PhaseTapChangerTablePoint"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/PhaseTapChangerTabular": {
+      "get": {
+        "summary": "PhaseTapChangerTabular API Documentation",
+        "description": "Returns an instance of PhaseTapChangerTabular",
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "https://raw.githubusercontent.com/believeohiozua/talesarena/main/document.json#/definitions/PhaseTapChangerTabular"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/Plant": {
+      "get": {
+        "summary": "Plant API Documentation",
+        "description": "Returns an instance of Plant",
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "https://raw.githubusercontent.com/believeohiozua/talesarena/main/document.json#/definitions/Plant"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/PowerCutZone": {
+      "get": {
+        "summary": "PowerCutZone API Documentation",
+        "description": "Returns an instance of PowerCutZone",
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "https://raw.githubusercontent.com/believeohiozua/talesarena/main/document.json#/definitions/PowerCutZone"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/PowerElectronicsConnection": {
+      "get": {
+        "summary": "PowerElectronicsConnection API Documentation",
+        "description": "Returns an instance of PowerElectronicsConnection",
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "https://raw.githubusercontent.com/believeohiozua/talesarena/main/document.json#/definitions/PowerElectronicsConnection"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/PowerElectronicsConnectionPhase": {
+      "get": {
+        "summary": "PowerElectronicsConnectionPhase API Documentation",
+        "description": "Returns an instance of PowerElectronicsConnectionPhase",
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "https://raw.githubusercontent.com/believeohiozua/talesarena/main/document.json#/definitions/PowerElectronicsConnectionPhase"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/PowerTransformer": {
+      "get": {
+        "summary": "PowerTransformer API Documentation",
+        "description": "Returns an instance of PowerTransformer",
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "https://raw.githubusercontent.com/believeohiozua/talesarena/main/document.json#/definitions/PowerTransformer"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/PowerTransformerEnd": {
+      "get": {
+        "summary": "PowerTransformerEnd API Documentation",
+        "description": "Returns an instance of PowerTransformerEnd",
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "https://raw.githubusercontent.com/believeohiozua/talesarena/main/document.json#/definitions/PowerTransformerEnd"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/ProtectedSwitch": {
+      "get": {
+        "summary": "ProtectedSwitch API Documentation",
+        "description": "Returns an instance of ProtectedSwitch",
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "https://raw.githubusercontent.com/believeohiozua/talesarena/main/document.json#/definitions/ProtectedSwitch"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/RatioTapChanger": {
+      "get": {
+        "summary": "RatioTapChanger API Documentation",
+        "description": "Returns an instance of RatioTapChanger",
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "https://raw.githubusercontent.com/believeohiozua/talesarena/main/document.json#/definitions/RatioTapChanger"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/RatioTapChangerTable": {
+      "get": {
+        "summary": "RatioTapChangerTable API Documentation",
+        "description": "Returns an instance of RatioTapChangerTable",
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "https://raw.githubusercontent.com/believeohiozua/talesarena/main/document.json#/definitions/RatioTapChangerTable"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/RatioTapChangerTable1": {
+      "get": {
+        "summary": "RatioTapChangerTable1 API Documentation",
+        "description": "Returns an instance of RatioTapChangerTable1",
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "https://raw.githubusercontent.com/believeohiozua/talesarena/main/document.json#/definitions/RatioTapChangerTable1"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/RatioTapChangerTablePoint": {
+      "get": {
+        "summary": "RatioTapChangerTablePoint API Documentation",
+        "description": "Returns an instance of RatioTapChangerTablePoint",
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "https://raw.githubusercontent.com/believeohiozua/talesarena/main/document.json#/definitions/RatioTapChangerTablePoint"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/ReactiveCapabilityCurve": {
+      "get": {
+        "summary": "ReactiveCapabilityCurve API Documentation",
+        "description": "Returns an instance of ReactiveCapabilityCurve",
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "https://raw.githubusercontent.com/believeohiozua/talesarena/main/document.json#/definitions/ReactiveCapabilityCurve"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/Recloser": {
+      "get": {
+        "summary": "Recloser API Documentation",
+        "description": "Returns an instance of Recloser",
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "https://raw.githubusercontent.com/believeohiozua/talesarena/main/document.json#/definitions/Recloser"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/RegulatingCondEq": {
+      "get": {
+        "summary": "RegulatingCondEq API Documentation",
+        "description": "Returns an instance of RegulatingCondEq",
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "https://raw.githubusercontent.com/believeohiozua/talesarena/main/document.json#/definitions/RegulatingCondEq"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/RegulatingControl": {
+      "get": {
+        "summary": "RegulatingControl API Documentation",
+        "description": "Returns an instance of RegulatingControl",
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "https://raw.githubusercontent.com/believeohiozua/talesarena/main/document.json#/definitions/RegulatingControl"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/RegulatingControl1": {
+      "get": {
+        "summary": "RegulatingControl1 API Documentation",
+        "description": "Returns an instance of RegulatingControl1",
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "https://raw.githubusercontent.com/believeohiozua/talesarena/main/document.json#/definitions/RegulatingControl1"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/RegulatingControlModeKind": {
+      "get": {
+        "summary": "RegulatingControlModeKind API Documentation",
+        "description": "Returns an instance of RegulatingControlModeKind",
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "https://raw.githubusercontent.com/believeohiozua/talesarena/main/document.json#/definitions/RegulatingControlModeKind"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/RegulatingControlModeKind1": {
+      "get": {
+        "summary": "RegulatingControlModeKind1 API Documentation",
+        "description": "Returns an instance of RegulatingControlModeKind1",
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "https://raw.githubusercontent.com/believeohiozua/talesarena/main/document.json#/definitions/RegulatingControlModeKind1"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/RegulationSchedule": {
+      "get": {
+        "summary": "RegulationSchedule API Documentation",
+        "description": "Returns an instance of RegulationSchedule",
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "https://raw.githubusercontent.com/believeohiozua/talesarena/main/document.json#/definitions/RegulationSchedule"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/RotatingMachine": {
+      "get": {
+        "summary": "RotatingMachine API Documentation",
+        "description": "Returns an instance of RotatingMachine",
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "https://raw.githubusercontent.com/believeohiozua/talesarena/main/document.json#/definitions/RotatingMachine"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/SVCControlMode": {
+      "get": {
+        "summary": "SVCControlMode API Documentation",
+        "description": "Returns an instance of SVCControlMode",
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "https://raw.githubusercontent.com/believeohiozua/talesarena/main/document.json#/definitions/SVCControlMode"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/Sectionaliser": {
+      "get": {
+        "summary": "Sectionaliser API Documentation",
+        "description": "Returns an instance of Sectionaliser",
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "https://raw.githubusercontent.com/believeohiozua/talesarena/main/document.json#/definitions/Sectionaliser"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/SeriesCompensator": {
+      "get": {
+        "summary": "SeriesCompensator API Documentation",
+        "description": "Returns an instance of SeriesCompensator",
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "https://raw.githubusercontent.com/believeohiozua/talesarena/main/document.json#/definitions/SeriesCompensator"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/ShortCircuitRotorKind": {
+      "get": {
+        "summary": "ShortCircuitRotorKind API Documentation",
+        "description": "Returns an instance of ShortCircuitRotorKind",
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "https://raw.githubusercontent.com/believeohiozua/talesarena/main/document.json#/definitions/ShortCircuitRotorKind"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/ShuntCompensator": {
+      "get": {
+        "summary": "ShuntCompensator API Documentation",
+        "description": "Returns an instance of ShuntCompensator",
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "https://raw.githubusercontent.com/believeohiozua/talesarena/main/document.json#/definitions/ShuntCompensator"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/ShuntCompensatorAction": {
+      "get": {
+        "summary": "ShuntCompensatorAction API Documentation",
+        "description": "Returns an instance of ShuntCompensatorAction",
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "https://raw.githubusercontent.com/believeohiozua/talesarena/main/document.json#/definitions/ShuntCompensatorAction"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/ShuntCompensatorPhase": {
+      "get": {
+        "summary": "ShuntCompensatorPhase API Documentation",
+        "description": "Returns an instance of ShuntCompensatorPhase",
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "https://raw.githubusercontent.com/believeohiozua/talesarena/main/document.json#/definitions/ShuntCompensatorPhase"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/SinglePhaseKind": {
+      "get": {
+        "summary": "SinglePhaseKind API Documentation",
+        "description": "Returns an instance of SinglePhaseKind",
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "https://raw.githubusercontent.com/believeohiozua/talesarena/main/document.json#/definitions/SinglePhaseKind"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/SinglePhaseKind1": {
+      "get": {
+        "summary": "SinglePhaseKind1 API Documentation",
+        "description": "Returns an instance of SinglePhaseKind1",
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "https://raw.githubusercontent.com/believeohiozua/talesarena/main/document.json#/definitions/SinglePhaseKind1"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/StaticVarCompensator": {
+      "get": {
+        "summary": "StaticVarCompensator API Documentation",
+        "description": "Returns an instance of StaticVarCompensator",
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "https://raw.githubusercontent.com/believeohiozua/talesarena/main/document.json#/definitions/StaticVarCompensator"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/SubGeographicalRegion": {
+      "get": {
+        "summary": "SubGeographicalRegion API Documentation",
+        "description": "Returns an instance of SubGeographicalRegion",
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "https://raw.githubusercontent.com/believeohiozua/talesarena/main/document.json#/definitions/SubGeographicalRegion"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/SvTapStep": {
+      "get": {
+        "summary": "SvTapStep API Documentation",
+        "description": "Returns an instance of SvTapStep",
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "https://raw.githubusercontent.com/believeohiozua/talesarena/main/document.json#/definitions/SvTapStep"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/Switch": {
+      "get": {
+        "summary": "Switch API Documentation",
+        "description": "Returns an instance of Switch",
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "https://raw.githubusercontent.com/believeohiozua/talesarena/main/document.json#/definitions/Switch"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/SwitchAction": {
+      "get": {
+        "summary": "SwitchAction API Documentation",
+        "description": "Returns an instance of SwitchAction",
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "https://raw.githubusercontent.com/believeohiozua/talesarena/main/document.json#/definitions/SwitchAction"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/SwitchPhase": {
+      "get": {
+        "summary": "SwitchPhase API Documentation",
+        "description": "Returns an instance of SwitchPhase",
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "https://raw.githubusercontent.com/believeohiozua/talesarena/main/document.json#/definitions/SwitchPhase"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/SwitchSchedule": {
+      "get": {
+        "summary": "SwitchSchedule API Documentation",
+        "description": "Returns an instance of SwitchSchedule",
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "https://raw.githubusercontent.com/believeohiozua/talesarena/main/document.json#/definitions/SwitchSchedule"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/SynchronousMachine": {
+      "get": {
+        "summary": "SynchronousMachine API Documentation",
+        "description": "Returns an instance of SynchronousMachine",
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "https://raw.githubusercontent.com/believeohiozua/talesarena/main/document.json#/definitions/SynchronousMachine"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/SynchronousMachineKind": {
+      "get": {
+        "summary": "SynchronousMachineKind API Documentation",
+        "description": "Returns an instance of SynchronousMachineKind",
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "https://raw.githubusercontent.com/believeohiozua/talesarena/main/document.json#/definitions/SynchronousMachineKind"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/SynchronousMachineKind1": {
+      "get": {
+        "summary": "SynchronousMachineKind1 API Documentation",
+        "description": "Returns an instance of SynchronousMachineKind1",
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "https://raw.githubusercontent.com/believeohiozua/talesarena/main/document.json#/definitions/SynchronousMachineKind1"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/SynchronousMachineOperatingMode": {
+      "get": {
+        "summary": "SynchronousMachineOperatingMode API Documentation",
+        "description": "Returns an instance of SynchronousMachineOperatingMode",
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "https://raw.githubusercontent.com/believeohiozua/talesarena/main/document.json#/definitions/SynchronousMachineOperatingMode"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/SynchronousMachineOperatingMode1": {
+      "get": {
+        "summary": "SynchronousMachineOperatingMode1 API Documentation",
+        "description": "Returns an instance of SynchronousMachineOperatingMode1",
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "https://raw.githubusercontent.com/believeohiozua/talesarena/main/document.json#/definitions/SynchronousMachineOperatingMode1"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/TapChanger": {
+      "get": {
+        "summary": "TapChanger API Documentation",
+        "description": "Returns an instance of TapChanger",
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "https://raw.githubusercontent.com/believeohiozua/talesarena/main/document.json#/definitions/TapChanger"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/TapChangerControl": {
+      "get": {
+        "summary": "TapChangerControl API Documentation",
+        "description": "Returns an instance of TapChangerControl",
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "https://raw.githubusercontent.com/believeohiozua/talesarena/main/document.json#/definitions/TapChangerControl"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/TapChangerControl1": {
+      "get": {
+        "summary": "TapChangerControl1 API Documentation",
+        "description": "Returns an instance of TapChangerControl1",
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "https://raw.githubusercontent.com/believeohiozua/talesarena/main/document.json#/definitions/TapChangerControl1"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/TapChangerTablePoint": {
+      "get": {
+        "summary": "TapChangerTablePoint API Documentation",
+        "description": "Returns an instance of TapChangerTablePoint",
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "https://raw.githubusercontent.com/believeohiozua/talesarena/main/document.json#/definitions/TapChangerTablePoint"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/TapSchedule": {
+      "get": {
+        "summary": "TapSchedule API Documentation",
+        "description": "Returns an instance of TapSchedule",
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "https://raw.githubusercontent.com/believeohiozua/talesarena/main/document.json#/definitions/TapSchedule"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/Terminal": {
+      "get": {
+        "summary": "Terminal API Documentation",
+        "description": "Returns an instance of Terminal",
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "https://raw.githubusercontent.com/believeohiozua/talesarena/main/document.json#/definitions/Terminal"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/TransformerControlMode": {
+      "get": {
+        "summary": "TransformerControlMode API Documentation",
+        "description": "Returns an instance of TransformerControlMode",
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "https://raw.githubusercontent.com/believeohiozua/talesarena/main/document.json#/definitions/TransformerControlMode"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/TransformerControlMode1": {
+      "get": {
+        "summary": "TransformerControlMode1 API Documentation",
+        "description": "Returns an instance of TransformerControlMode1",
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "https://raw.githubusercontent.com/believeohiozua/talesarena/main/document.json#/definitions/TransformerControlMode1"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/TransformerCoreAdmittance": {
+      "get": {
+        "summary": "TransformerCoreAdmittance API Documentation",
+        "description": "Returns an instance of TransformerCoreAdmittance",
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "https://raw.githubusercontent.com/believeohiozua/talesarena/main/document.json#/definitions/TransformerCoreAdmittance"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/TransformerEnd": {
+      "get": {
+        "summary": "TransformerEnd API Documentation",
+        "description": "Returns an instance of TransformerEnd",
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "https://raw.githubusercontent.com/believeohiozua/talesarena/main/document.json#/definitions/TransformerEnd"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/TransformerEnd1": {
+      "get": {
+        "summary": "TransformerEnd1 API Documentation",
+        "description": "Returns an instance of TransformerEnd1",
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "https://raw.githubusercontent.com/believeohiozua/talesarena/main/document.json#/definitions/TransformerEnd1"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/TransformerEndInfo": {
+      "get": {
+        "summary": "TransformerEndInfo API Documentation",
+        "description": "Returns an instance of TransformerEndInfo",
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "https://raw.githubusercontent.com/believeohiozua/talesarena/main/document.json#/definitions/TransformerEndInfo"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/TransformerMeshImpedance": {
+      "get": {
+        "summary": "TransformerMeshImpedance API Documentation",
+        "description": "Returns an instance of TransformerMeshImpedance",
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "https://raw.githubusercontent.com/believeohiozua/talesarena/main/document.json#/definitions/TransformerMeshImpedance"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/TransformerStarImpedance": {
+      "get": {
+        "summary": "TransformerStarImpedance API Documentation",
+        "description": "Returns an instance of TransformerStarImpedance",
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "https://raw.githubusercontent.com/believeohiozua/talesarena/main/document.json#/definitions/TransformerStarImpedance"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/TransformerStarImpedance1": {
+      "get": {
+        "summary": "TransformerStarImpedance1 API Documentation",
+        "description": "Returns an instance of TransformerStarImpedance1",
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "https://raw.githubusercontent.com/believeohiozua/talesarena/main/document.json#/definitions/TransformerStarImpedance1"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/TransformerTank": {
+      "get": {
+        "summary": "TransformerTank API Documentation",
+        "description": "Returns an instance of TransformerTank",
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "https://raw.githubusercontent.com/believeohiozua/talesarena/main/document.json#/definitions/TransformerTank"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/TransformerTankEnd": {
+      "get": {
+        "summary": "TransformerTankEnd API Documentation",
+        "description": "Returns an instance of TransformerTankEnd",
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "https://raw.githubusercontent.com/believeohiozua/talesarena/main/document.json#/definitions/TransformerTankEnd"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/UnitMultiplier": {
+      "get": {
+        "summary": "UnitMultiplier API Documentation",
+        "description": "Returns an instance of UnitMultiplier",
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "https://raw.githubusercontent.com/believeohiozua/talesarena/main/document.json#/definitions/UnitMultiplier"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/VoltageControlZone": {
+      "get": {
+        "summary": "VoltageControlZone API Documentation",
+        "description": "Returns an instance of VoltageControlZone",
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "https://raw.githubusercontent.com/believeohiozua/talesarena/main/document.json#/definitions/VoltageControlZone"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/VoltageControlZone1": {
+      "get": {
+        "summary": "VoltageControlZone1 API Documentation",
+        "description": "Returns an instance of VoltageControlZone1",
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "https://raw.githubusercontent.com/believeohiozua/talesarena/main/document.json#/definitions/VoltageControlZone1"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/WindingConnection": {
+      "get": {
+        "summary": "WindingConnection API Documentation",
+        "description": "Returns an instance of WindingConnection",
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "https://raw.githubusercontent.com/believeohiozua/talesarena/main/document.json#/definitions/WindingConnection"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/WindingConnection1": {
+      "get": {
+        "summary": "WindingConnection1 API Documentation",
+        "description": "Returns an instance of WindingConnection1",
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "https://raw.githubusercontent.com/believeohiozua/talesarena/main/document.json#/definitions/WindingConnection1"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/WireAssemblyInfo": {
+      "get": {
+        "summary": "WireAssemblyInfo API Documentation",
+        "description": "Returns an instance of WireAssemblyInfo",
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "https://raw.githubusercontent.com/believeohiozua/talesarena/main/document.json#/definitions/WireAssemblyInfo"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/WireInfo": {
+      "get": {
+        "summary": "WireInfo API Documentation",
+        "description": "Returns an instance of WireInfo",
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "https://raw.githubusercontent.com/believeohiozua/talesarena/main/document.json#/definitions/WireInfo"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/WireSegment": {
+      "get": {
+        "summary": "WireSegment API Documentation",
+        "description": "Returns an instance of WireSegment",
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "https://raw.githubusercontent.com/believeohiozua/talesarena/main/document.json#/definitions/WireSegment"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/WireSegmentPhase": {
+      "get": {
+        "summary": "WireSegmentPhase API Documentation",
+        "description": "Returns an instance of WireSegmentPhase",
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "https://raw.githubusercontent.com/believeohiozua/talesarena/main/document.json#/definitions/WireSegmentPhase"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/WireSpacingInfo": {
+      "get": {
+        "summary": "WireSpacingInfo API Documentation",
+        "description": "Returns an instance of WireSpacingInfo",
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "https://raw.githubusercontent.com/believeohiozua/talesarena/main/document.json#/definitions/WireSpacingInfo"
                   }
                 }
               }
@@ -34,3 +2890,4 @@
     }
   }
 }
+
