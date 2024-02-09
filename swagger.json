@@ -1,5 +1,5 @@
 {
-  "openapi": "3.0.0", 
+  "swagger": "2.0",
   "info": {
     "title": "Sample API", 
     "description": "A simple API to demonstrate OpenAPI 3.0 code generation with MVN",
